@@ -1,0 +1,60 @@
+{
+	"app": {
+		"unavailable": "Aplikasi %s tidak tersedia!",
+		"notfound": "Aplikasi %s tidak ditemukan!",
+		"name": {
+		  "mobame": "mobile message"
+		}
+	},
+	"asset": {
+		"unavailable": "Asset %s tidak tersedia!",
+		"notfound": "Asset %s tidak ditemukan!",
+		"notkindof": "%s bukan asset dari aplikasi %s!",
+		"datagetsuccess": "Berhasil mendapatkan data %s!",
+		"datagetfailed": "Gagal mendapatkan data %s!",
+		"datagetnotfound": "Data %s tidak ditemukan!",
+		"downloadpreparing": "Sedang mengunduh %s...",
+		"downloadsuccess": "Berhasil mengunduh %s!",
+		"downloadfailed": "Gagal mengunduh %s",
+		"wrongapptype": "Tipe dari %s seharusnya %s, bukan %s!",
+		"wrongmembertype": "Harap memasukan objek member dengan list kanji atau id!",
+		"type": {
+			"timelineorpast": "timeline atau past_messages",
+			"timeline": "timeline",
+			"past_messages": "past messages",
+			"member": "member"
+		}
+	},
+	"credentials": {
+		"notfound": "Kredensial dari %s tidak ditemukan!",
+		"reftokenunmatch": "%s tidak cocok dengan format refresh_token dari %s!",
+		"reftokenundefined": "Anda mungkin belum memasukkan refresh_token dari %s.",
+		"acctokenupdated": "access_token dari %s berhasil diupdate!"
+	},
+	"object": {
+		"missingkey": "Objek data yang dimasukkan tidak memiliki nilai kunci yang diperlukan."
+	},
+	"param": {
+		"assetname": "Nama Asset",
+		"type": "Tipe",
+		"member": "Member",
+		"fromdate": "Dari Tanggal",
+		"todate": "Sampai Tanggal",
+		"requestedat": "Diminta Pada",
+		"author": "Pembuat:",
+		"downloaddir": "Folder unduhan:",
+		"progsdesc": "Versi yang ditingkatkan dari sakamichi-app-ts-cli.\nAlat untuk mengunduh asset aplikasi sakamichi seperti video dan foto.\nAplikasi yang didukung:",
+		"progsfulldocs": "Dokumentasi lengkap ada di github!",
+		"progssample": "Contoh penggunaan:",
+		"progsearlywarn": "*Ini adalah versi awal dari aplikasi. Akan ada banyak fitur di masa depan!",
+		"optsapp": "Opsi wajib. Harap masukkan nama aplikasi apa yang ingin diunduh assetnya!",
+		"optstype": "Opsi wajib. Masukkan asset yang ingin diunduh!",
+		"optsmember": "Opsi wajib apabila ingin mengunduh asset mobame. Anda harus memasukkan id member atau nama member dalam kanji.",
+		"optsdate": "Opsi tidak wajib. Ini diperlukan apabila ingin mengunduh asset mobame dengan mode timeline. Format tanggalnya adalah yyyy-mm-dd.",
+		"optsversion": "Perlihatkan versi aplikasi.",
+		"optshelp": "Perlihatkan bantuan untuk perintah.",
+		"optsparallel": "Apabila mendeklarasikan ini, beberapa fungsi asinkron akan berjalan serentak.",
+		"optsmobametoday": "Unduh mobame hari ini.",
+		"optsrefreshtoken": "Update refresh token di kredensial."
+	}
+}

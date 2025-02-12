@@ -1,0 +1,60 @@
+{
+	"app": {
+		"unavailable": "「%s」アプリケーションは利用出来ません！",
+		"notfound": "「%s」アプリケーションが見つかりません！",
+		"name": {
+			"mobame": "モバイルメッセージ"
+		}
+	},
+	"asset": {
+		"unavailable": "「%s」アセットは利用出来ません！",
+		"notfound": "「%s」アセットが見つかりません！",
+		"notkindof": "「%s」は%sのアセットではありません！",
+		"datagetsuccess": "「%s」のデータを取得に成功しました！",
+		"datagetfailed": "「%s」のデータを取得に失敗しました！",
+		"datagetnotfound": "「%s」のデータが見つかりません！",
+		"downloadpreparing": "「%s」をダウンロード中。。。",
+		"downloadsuccess": "「%s」のダウンロードが成功しました！",
+		"downloadfailed": "「%s」のダウンロードが失敗しました！",
+		"wrongapptype": "「%s」のタイプは%sです。「%s」ではありません！",
+		"wrongmembertype": "メンバーオブジェクトを漢字またはIDリストで指定してください！",
+		"type": {
+			"timelineorpast": "「timeline」 とか 「past_messages」",
+			"timeline": "タイムライン",
+			"past_messages": "過去のメッセージ",
+			"member": "「メンバー」"
+		}
+	},
+	"credentials": {
+		"notfound": "「%s」のログイン情報が見つかりません!",
+		"reftokenunmatch": "「%s」は「%s」refresh_tokenの形式と間違えます！",
+		"reftokenundefined": "おそらく「%s」のためのrefresh_tokenが定義されていません。",
+		"acctokenupdated": "「%s」のaccess_tokenが更新に成功されました！"
+	},
+	"object": {
+		"missingkey": "挿入されたデータオブジェクトに必要なキーがありません。"
+	},
+	"param": {
+		"assetname": "アセット名",
+		"type": "タイプ",
+		"member": "メンバー",
+		"fromdate": "開始日",
+		"todate": "終了日",
+		"requestedat": "リクエスト日時",
+		"author": "作成者：",
+		"downloaddir": "ダウンロードフォルダ：",
+		"progsdesc": "sakamichi-app-ts-cliの改良版。\nビデオや写真などの坂道アプリのアセットをダウンロードするためのツール。\nサポートされているアプリ：",
+		"progsfulldocs": "完全なドキュメントはgithubにあります!",
+		"progssample": "使用例：",
+		"progsearlywarn": "※これはアプリの初期バージョンです。今後さらに機能を追加していきます！",
+		"optsapp": "必要な引数です。どんなアプリがアセットをダウンロードしたいを指定してください！",
+		"optstype": "必要な引数です。アセットがダウンロードしたいを指定してください！",
+		"optsmember": "モバイルメッセージアセットをダウンロードしたい時には必要な引数です。メンバーIDとかメンバーの漢字の本名を指定してお願いします。",
+		"optsdate": "オプションな引数です。タイムラインモードでモバイルメッセージアセットをダウンロードしたい時には必要になります。日付形式は「yyyy-mm-dd」。",
+		"optsversion": "アプリのバージョンを表示。",
+		"optshelp": "コマンドのヘルプを表示。",
+		"optsparallel": "これを宣言すると、いくつかの非同期関数が同時に実行される可能性があります。",
+		"optsmobametoday": "本日メバルメッセージをダウンロードします。",
+		"optsrefreshtoken": "クレデンシャルにリフレッシュトケンを更新します。"
+	}
+}

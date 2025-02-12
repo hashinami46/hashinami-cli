@@ -1,0 +1,1324 @@
+{
+  "nogizaka46": [
+    {
+      "name": "新4期生リレー",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "",
+      "nogiblog": "400001"
+    },
+    {
+      "name": "運営スタッフ",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "",
+      "nogiblog": "400003"
+    },
+    {
+      "name": "３期生",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "",
+      "nogiblog": "40004"
+    },
+    {
+      "name": "４期生",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "",
+      "nogiblog": "40005"
+    },
+    {
+      "name": "研究生",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "",
+      "nogiblog": "40006"
+    },
+    {
+      "name": "５期生",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "",
+      "nogiblog": "40007"
+    },
+    {
+      "name": "乃木坂46",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "45",
+      "nogiblog": ""
+    },
+    {
+      "name": "新参者五期生",
+      "gen": "",
+      "itsunogi": "",
+      "nogikoi": "",
+      "nogimsg": "57",
+      "nogiblog": ""
+    },
+    {
+      "name": "秋元真夏",
+      "gen": "1",
+      "itsunogi": "1",
+      "nogikoi": "1",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "生田絵梨花",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "2",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "生駒里奈",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "3",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "伊藤かりん",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "4",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "伊藤純奈",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "5",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "伊藤万理華",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "6",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "井上小百合",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "7",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "衛藤美彩",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "8",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "川後陽菜",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "9",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "能條愛未",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "10",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "北野日奈子",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "11",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "齋藤飛鳥",
+      "gen": "1",
+      "itsunogi": "12",
+      "nogikoi": "12",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "斎藤ちはる",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "13",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "斉藤優里",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "14",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "相楽伊織",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "15",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "桜井玲香",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "16",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "佐々木琴子",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "17",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "白石麻衣",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "18",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "新内眞衣",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "19",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "鈴木絢音",
+      "gen": "2",
+      "itsunogi": "20",
+      "nogikoi": "20",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "高山一実",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "21",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "寺田蘭世",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "22",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "中田花奈",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "23",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "中元日芽香",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "24",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "西野七瀬",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "26",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "樋口日奈",
+      "gen": "2",
+      "itsunogi": "27",
+      "nogikoi": "29",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "星野みなみ",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "31",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "堀未央奈",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "32",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "松村沙友理",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "33",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "山崎怜奈",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "34",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "若月佑美",
+      "gen": "1",
+      "itsunogi": "",
+      "nogikoi": "35",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "渡辺みり愛",
+      "gen": "2",
+      "itsunogi": "",
+      "nogikoi": "36",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "和田まあや",
+      "gen": "1",
+      "itsunogi": "34",
+      "nogikoi": "37",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "伊藤理々杏",
+      "gen": "3",
+      "itsunogi": "35",
+      "nogikoi": "38",
+      "nogimsg": "17",
+      "nogiblog": "36749"
+    },
+    {
+      "name": "岩本蓮加",
+      "gen": "3",
+      "itsunogi": "36",
+      "nogikoi": "39",
+      "nogimsg": "18",
+      "nogiblog": "36750"
+    },
+    {
+      "name": "梅澤美波",
+      "gen": "3",
+      "itsunogi": "37",
+      "nogikoi": "40",
+      "nogimsg": "19",
+      "nogiblog": "36751"
+    },
+    {
+      "name": "大園桃子",
+      "gen": "3",
+      "itsunogi": "38",
+      "nogikoi": "41",
+      "nogimsg": "",
+      "nogiblog": ""
+    },
+    {
+      "name": "久保史緒里",
+      "gen": "3",
+      "itsunogi": "39",
+      "nogikoi": "42",
+      "nogimsg": "21",
+      "nogiblog": "36753"
+    },
+    {
+      "name": "阪口珠美",
+      "gen": "3",
+      "itsunogi": "40",
+      "nogikoi": "43",
+      "nogimsg": "22",
+      "nogiblog": "36754"
+    },
+    {
+      "name": "佐藤楓",
+      "gen": "3",
+      "itsunogi": "41",
+      "nogikoi": "44",
+      "nogimsg": "23",
+      "nogiblog": "36755"
+    },
+    {
+      "name": "中村麗乃",
+      "gen": "3",
+      "itsunogi": "42",
+      "nogikoi": "45",
+      "nogimsg": "24",
+      "nogiblog": "36756"
+    },
+    {
+      "name": "向井葉月",
+      "gen": "3",
+      "itsunogi": "43",
+      "nogikoi": "46",
+      "nogimsg": "25",
+      "nogiblog": "36757"
+    },
+    {
+      "name": "山下美月",
+      "gen": "3",
+      "itsunogi": "44",
+      "nogikoi": "47",
+      "nogimsg": "26",
+      "nogiblog": "36758"
+    },
+    {
+      "name": "吉田綾乃クリスティー",
+      "gen": "3",
+      "itsunogi": "45",
+      "nogikoi": "48",
+      "nogimsg": "27",
+      "nogiblog": "36759"
+    },
+    {
+      "name": "与田祐希",
+      "gen": "3",
+      "itsunogi": "46",
+      "nogikoi": "49",
+      "nogimsg": "28",
+      "nogiblog": "36760"
+    },
+    {
+      "name": "遠藤さくら",
+      "gen": "4",
+      "itsunogi": "48",
+      "nogikoi": "50",
+      "nogimsg": "29",
+      "nogiblog": "48006"
+    },
+    {
+      "name": "賀喜遥香",
+      "gen": "4",
+      "itsunogi": "49",
+      "nogikoi": "51",
+      "nogimsg": "30",
+      "nogiblog": "48008"
+    },
+    {
+      "name": "掛橋沙耶香",
+      "gen": "4",
+      "itsunogi": "50",
+      "nogikoi": "52",
+      "nogimsg": "31",
+      "nogiblog": "48009"
+    },
+    {
+      "name": "金川紗耶",
+      "gen": "4",
+      "itsunogi": "51",
+      "nogikoi": "53",
+      "nogimsg": "32",
+      "nogiblog": "48010"
+    },
+    {
+      "name": "北川悠理",
+      "gen": "4",
+      "itsunogi": "52",
+      "nogikoi": "54",
+      "nogimsg": "33",
+      "nogiblog": ""
+    },
+    {
+      "name": "柴田柚菜",
+      "gen": "4",
+      "itsunogi": "53",
+      "nogikoi": "55",
+      "nogimsg": "36",
+      "nogiblog": "48013"
+    },
+    {
+      "name": "清宮レイ",
+      "gen": "4",
+      "itsunogi": "54",
+      "nogikoi": "56",
+      "nogimsg": "37",
+      "nogiblog": "48014"
+    },
+    {
+      "name": "田村真佑",
+      "gen": "4",
+      "itsunogi": "55",
+      "nogikoi": "57",
+      "nogimsg": "38",
+      "nogiblog": "48015"
+    },
+    {
+      "name": "筒井あやめ",
+      "gen": "4",
+      "itsunogi": "56",
+      "nogikoi": "58",
+      "nogimsg": "39",
+      "nogiblog": "48017"
+    },
+    {
+      "name": "早川聖来",
+      "gen": "4",
+      "itsunogi": "57",
+      "nogikoi": "59",
+      "nogimsg": "40",
+      "nogiblog": ""
+    },
+    {
+      "name": "矢久保美緒",
+      "gen": "4",
+      "itsunogi": "58",
+      "nogikoi": "60",
+      "nogimsg": "43",
+      "nogiblog": "48019"
+    },
+    {
+      "name": "黒見明香",
+      "gen": "4",
+      "itsunogi": "59",
+      "nogikoi": "61",
+      "nogimsg": "34",
+      "nogiblog": "55383"
+    },
+    {
+      "name": "佐藤璃果",
+      "gen": "4",
+      "itsunogi": "60",
+      "nogikoi": "62",
+      "nogimsg": "35",
+      "nogiblog": "55384"
+    },
+    {
+      "name": "林瑠奈",
+      "gen": "4",
+      "itsunogi": "61",
+      "nogikoi": "63",
+      "nogimsg": "41",
+      "nogiblog": "55385"
+    },
+    {
+      "name": "松尾美佑",
+      "gen": "4",
+      "itsunogi": "62",
+      "nogikoi": "64",
+      "nogimsg": "42",
+      "nogiblog": "55386"
+    },
+    {
+      "name": "弓木奈於",
+      "gen": "4",
+      "itsunogi": "63",
+      "nogikoi": "65",
+      "nogimsg": "44",
+      "nogiblog": "55387"
+    },
+    {
+      "name": "五百城茉央",
+      "gen": "5",
+      "itsunogi": "64",
+      "nogikoi": "66",
+      "nogimsg": "46",
+      "nogiblog": "55396"
+    },
+    {
+      "name": "池田瑛紗",
+      "gen": "5",
+      "itsunogi": "65",
+      "nogikoi": "67",
+      "nogimsg": "47",
+      "nogiblog": "55397"
+    },
+    {
+      "name": "一ノ瀬美空",
+      "gen": "5",
+      "itsunogi": "66",
+      "nogikoi": "68",
+      "nogimsg": "48",
+      "nogiblog": "55390"
+    },
+    {
+      "name": "井上和",
+      "gen": "5",
+      "itsunogi": "67",
+      "nogikoi": "69",
+      "nogimsg": "49",
+      "nogiblog": "55389"
+    },
+    {
+      "name": "岡本姫奈",
+      "gen": "5",
+      "itsunogi": "68",
+      "nogikoi": "70",
+      "nogimsg": "50",
+      "nogiblog": "55401"
+    },
+    {
+      "name": "小川彩",
+      "gen": "5",
+      "itsunogi": "69",
+      "nogikoi": "71",
+      "nogimsg": "51",
+      "nogiblog": "55392"
+    },
+    {
+      "name": "奥田いろは",
+      "gen": "5",
+      "itsunogi": "70",
+      "nogikoi": "72",
+      "nogimsg": "52",
+      "nogiblog": "55394"
+    },
+    {
+      "name": "川﨑桜",
+      "gen": "5",
+      "itsunogi": "71",
+      "nogikoi": "73",
+      "nogimsg": "53",
+      "nogiblog": "55400"
+    },
+    {
+      "name": "菅原咲月",
+      "gen": "5",
+      "itsunogi": "72",
+      "nogikoi": "74",
+      "nogimsg": "54",
+      "nogiblog": "55391"
+    },
+    {
+      "name": "冨里奈央",
+      "gen": "5",
+      "itsunogi": "73",
+      "nogikoi": "75",
+      "nogimsg": "55",
+      "nogiblog": "55393"
+    },
+    {
+      "name": "中西アルノ",
+      "gen": "5",
+      "itsunogi": "74",
+      "nogikoi": "76",
+      "nogimsg": "56",
+      "nogiblog": "55395"
+    }
+  ],
+  "sakurazaka46": [
+    {
+      "name": "櫻坂46",
+      "gen": "",
+      "sakukoi": "",
+      "unison": "",
+      "sakumsg": "33",
+      "sakublog": ""
+    },
+    {
+      "name": "新参者櫻坂46三期生",
+      "gen": "",
+      "sakukoi": "",
+      "unison": "",
+      "sakumsg": "73",
+      "sakublog": ""
+    },
+    {
+      "name": "石森虹花",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "101",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "上村莉菜",
+      "gen": "1",
+      "sakukoi": "01",
+      "unison": "103",
+      "sakumsg": "4",
+      "sakublog": "03"
+    },
+    {
+      "name": "尾関梨香",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "104",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "織田奈那",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "105",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "小池美波",
+      "gen": "1",
+      "sakukoi": "02",
+      "unison": "106",
+      "sakumsg": "7",
+      "sakublog": "06"
+    },
+    {
+      "name": "小林由依",
+      "gen": "1",
+      "sakukoi": "03",
+      "unison": "107",
+      "sakumsg": "8",
+      "sakublog": ""
+    },
+    {
+      "name": "齋藤冬優花",
+      "gen": "1",
+      "sakukoi": "04",
+      "unison": "108",
+      "sakumsg": "9",
+      "sakublog": "08"
+    },
+    {
+      "name": "佐藤詩織",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "109",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "菅井友香",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "111",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "鈴本美愉",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "112",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "長沢菜々香",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "113",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "土生瑞穂",
+      "gen": "1",
+      "sakukoi": "05",
+      "unison": "115",
+      "sakumsg": "15",
+      "sakublog": ""
+    },
+    {
+      "name": "原田葵",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "116",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "平手友梨奈",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "117",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "守屋茜",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "118",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "渡辺梨加",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "120",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "渡邉理佐",
+      "gen": "1",
+      "sakukoi": "",
+      "unison": "121",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "井上梨名",
+      "gen": "2",
+      "sakukoi": "",
+      "unison": "122",
+      "sakumsg": "",
+      "sakublog": "43"
+    },
+    {
+      "name": "関有美子",
+      "gen": "2",
+      "sakukoi": "",
+      "unison": "123",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "遠藤光莉",
+      "gen": "2",
+      "sakukoi": "02",
+      "unison": "131",
+      "sakumsg": "",
+      "sakublog": "53"
+    },
+    {
+      "name": "大園玲",
+      "gen": "2",
+      "sakukoi": "03",
+      "unison": "132",
+      "sakumsg": "56",
+      "sakublog": "54"
+    },
+    {
+      "name": "大沼晶保",
+      "gen": "2",
+      "sakukoi": "04",
+      "unison": "133",
+      "sakumsg": "57",
+      "sakublog": "55"
+    },
+    {
+      "name": "幸坂茉莉乃",
+      "gen": "2",
+      "sakukoi": "05",
+      "unison": "134",
+      "sakumsg": "58",
+      "sakublog": "56"
+    },
+    {
+      "name": "武元唯衣",
+      "gen": "2",
+      "sakukoi": "06",
+      "unison": "124",
+      "sakumsg": "46",
+      "sakublog": "45"
+    },
+    {
+      "name": "田村保乃",
+      "gen": "2",
+      "sakukoi": "07",
+      "unison": "125",
+      "sakumsg": "47",
+      "sakublog": "46"
+    },
+    {
+      "name": "藤吉夏鈴",
+      "gen": "2",
+      "sakukoi": "08",
+      "unison": "126",
+      "sakumsg": "48",
+      "sakublog": "47"
+    },
+    {
+      "name": "増本綺良",
+      "gen": "2",
+      "sakukoi": "09",
+      "unison": "135",
+      "sakumsg": "59",
+      "sakublog": "57"
+    },
+    {
+      "name": "松田里奈",
+      "gen": "2",
+      "sakukoi": "10",
+      "unison": "127",
+      "sakumsg": "49",
+      "sakublog": "48"
+    },
+    {
+      "name": "松平璃子",
+      "gen": "2",
+      "sakukoi": "",
+      "unison": "128",
+      "sakumsg": "",
+      "sakublog": ""
+    },
+    {
+      "name": "森田ひかる",
+      "gen": "2",
+      "sakukoi": "11",
+      "unison": "129",
+      "sakumsg": "51",
+      "sakublog": "50"
+    },
+    {
+      "name": "守屋麗奈",
+      "gen": "2",
+      "sakukoi": "12",
+      "unison": "136",
+      "sakumsg": "60",
+      "sakublog": "58"
+    },
+    {
+      "name": "山﨑天",
+      "gen": "2",
+      "sakukoi": "13",
+      "unison": "130",
+      "sakumsg": "52"
+    },
+    {
+      "name": "石森璃花",
+      "gen": "3",
+      "sakukoi": "01",
+      "unison": "137",
+      "sakumsg": "62",
+      "sakublog": "59"
+    },
+    {
+      "name": "遠藤理子",
+      "gen": "3",
+      "sakukoi": "02",
+      "unison": "138",
+      "sakumsg": "63",
+      "sakublog": "60"
+    },
+    {
+      "name": "小田倉麗奈",
+      "gen": "3",
+      "sakukoi": "03",
+      "unison": "139",
+      "sakumsg": "64",
+      "sakublog": "61"
+    },
+    {
+      "name": "小島凪紗",
+      "gen": "3",
+      "sakukoi": "04",
+      "unison": "140",
+      "sakumsg": "65",
+      "sakublog": "62"
+    },
+    {
+      "name": "谷口愛季",
+      "gen": "3",
+      "sakukoi": "05",
+      "unison": "141",
+      "sakumsg": "66",
+      "sakublog": "63"
+    },
+    {
+      "name": "中嶋優月",
+      "gen": "3",
+      "sakukoi": "06",
+      "unison": "142",
+      "sakumsg": "67",
+      "sakublog": "64"
+    },
+    {
+      "name": "的野美青",
+      "gen": "3",
+      "sakukoi": "07",
+      "unison": "143",
+      "sakumsg": "68",
+      "sakublog": "65"
+    },
+    {
+      "name": "向井純葉",
+      "gen": "3",
+      "sakukoi": "08",
+      "unison": "144",
+      "sakumsg": "69",
+      "sakublog": "66"
+    },
+    {
+      "name": "村井優",
+      "gen": "3",
+      "sakukoi": "09",
+      "unison": "145",
+      "sakumsg": "70",
+      "sakublog": "67"
+    },
+    {
+      "name": "村山美羽",
+      "gen": "3",
+      "sakukoi": "10",
+      "unison": "146",
+      "sakumsg": "71",
+      "sakublog": "68"
+    },
+    {
+      "name": "山下瞳月",
+      "gen": "3",
+      "sakukoi": "11",
+      "unison": "147",
+      "sakumsg": "72",
+      "sakublog": "69"
+    }
+  ],
+  "hinatazaka46": [
+    {
+      "name": "日向坂46",
+      "gen": "",
+      "hinakoi": "",
+      "unison": "",
+      "hinamsg": "43",
+      "hinablog": ""
+    },
+    {
+      "name": "ポカ",
+      "gen": "",
+      "hinakoi": "",
+      "unison": "",
+      "hinamsg": "43",
+      "hinablog": "000"
+    },
+    {
+      "name": "新参者日向坂46四期生",
+      "gen": "",
+      "hinakoi": "",
+      "unison": "",
+      "hinamsg": "78",
+      "hinablog": ""
+    },
+    {
+      "name": "井口眞緒",
+      "gen": "1",
+      "hinakoi": "",
+      "unison": "201",
+      "hinamsg": "",
+      "hinablog": ""
+    },
+    {
+      "name": "潮紗理菜",
+      "gen": "1",
+      "hinakoi": "01",
+      "unison": "202",
+      "hinamsg": "22",
+      "hinablog": ""
+    },
+    {
+      "name": "影山優佳",
+      "gen": "1",
+      "hinakoi": "",
+      "unison": "204",
+      "hinamsg": "",
+      "hinablog": ""
+    },
+    {
+      "name": "加藤史帆",
+      "gen": "1",
+      "hinakoi": "03",
+      "unison": "205",
+      "hinamsg": "25",
+      "hinablog": "5"
+    },
+    {
+      "name": "齊藤京子",
+      "gen": "1",
+      "hinakoi": "04",
+      "unison": "206",
+      "hinamsg": "26",
+      "hinablog": "6"
+    },
+    {
+      "name": "佐々木久美",
+      "gen": "1",
+      "hinakoi": "05",
+      "unison": "207",
+      "hinamsg": "27",
+      "hinablog": "7"
+    },
+    {
+      "name": "佐々木美玲",
+      "gen": "1",
+      "hinakoi": "06",
+      "unison": "208",
+      "hinamsg": "28",
+      "hinablog": "8"
+    },
+    {
+      "name": "高瀬愛奈",
+      "gen": "1",
+      "hinakoi": "07",
+      "unison": "209",
+      "hinamsg": "29",
+      "hinablog": "9"
+    },
+    {
+      "name": "高本彩花",
+      "gen": "1",
+      "hinakoi": "08",
+      "unison": "210",
+      "hinamsg": "30",
+      "hinablog": "10"
+    },
+    {
+      "name": "東村芽依",
+      "gen": "1",
+      "hinakoi": "09",
+      "unison": "211",
+      "hinamsg": "32",
+      "hinablog": "11"
+    },
+    {
+      "name": "金村美玖",
+      "gen": "2",
+      "hinakoi": "01",
+      "unison": "212",
+      "hinamsg": "34",
+      "hinablog": "12"
+    },
+    {
+      "name": "河田陽菜",
+      "gen": "2",
+      "hinakoi": "02",
+      "unison": "213",
+      "hinamsg": "35",
+      "hinablog": "13"
+    },
+    {
+      "name": "小坂菜緒",
+      "gen": "2",
+      "hinakoi": "03",
+      "unison": "214",
+      "hinamsg": "36",
+      "hinablog": "14"
+    },
+    {
+      "name": "富田鈴花",
+      "gen": "2",
+      "hinakoi": "04",
+      "unison": "215",
+      "hinamsg": "37",
+      "hinablog": "15"
+    },
+    {
+      "name": "丹生明里",
+      "gen": "2",
+      "hinakoi": "05",
+      "unison": "216",
+      "hinamsg": "38",
+      "hinablog": "16"
+    },
+    {
+      "name": "濱岸ひより",
+      "gen": "2",
+      "hinakoi": "06",
+      "unison": "217",
+      "hinamsg": "39",
+      "hinablog": "17"
+    },
+    {
+      "name": "松田好花",
+      "gen": "2",
+      "hinakoi": "07",
+      "unison": "218",
+      "hinamsg": "40",
+      "hinablog": "18"
+    },
+    {
+      "name": "宮田愛萌",
+      "gen": "2",
+      "hinakoi": "08",
+      "unison": "219",
+      "hinamsg": "",
+      "hinablog": ""
+    },
+    {
+      "name": "渡邉美穂",
+      "gen": "2",
+      "hinakoi": "09",
+      "unison": "220",
+      "hinamsg": "",
+      "hinablog": ""
+    },
+    {
+      "name": "上村ひなの",
+      "gen": "3",
+      "hinakoi": "01",
+      "unison": "221",
+      "hinamsg": "53",
+      "hinablog": "21"
+    },
+    {
+      "name": "髙橋未来虹",
+      "gen": "3",
+      "hinakoi": "02",
+      "unison": "222",
+      "hinamsg": "61",
+      "hinablog": "22"
+    },
+    {
+      "name": "森本茉莉",
+      "gen": "3",
+      "hinakoi": "03",
+      "unison": "223",
+      "hinamsg": "62",
+      "hinablog": "23"
+    },
+    {
+      "name": "山口陽世",
+      "gen": "3",
+      "hinakoi": "04",
+      "unison": "224",
+      "hinamsg": "63",
+      "hinablog": "24"
+    },
+    {
+      "name": "石塚瑶季",
+      "gen": "4",
+      "hinakoi": "01",
+      "unison": "225",
+      "hinamsg": "66",
+      "hinablog": "25"
+    },
+    {
+      "name": "岸帆夏",
+      "gen": "4",
+      "hinakoi": "02",
+      "unison": "226",
+      "hinamsg": "67",
+      "hinablog": ""
+    },
+    {
+      "name": "小西夏菜実",
+      "gen": "4",
+      "hinakoi": "03",
+      "unison": "227",
+      "hinamsg": "68",
+      "hinablog": "27"
+    },
+    {
+      "name": "清水理央",
+      "gen": "4",
+      "hinakoi": "04",
+      "unison": "228",
+      "hinamsg": "69",
+      "hinablog": "28"
+    },
+    {
+      "name": "正源司陽子",
+      "gen": "4",
+      "hinakoi": "05",
+      "unison": "229",
+      "hinamsg": "70",
+      "hinablog": "29"
+    },
+    {
+      "name": "竹内希来里",
+      "gen": "4",
+      "hinakoi": "06",
+      "unison": "230",
+      "hinamsg": "71",
+      "hinablog": "30"
+    },
+    {
+      "name": "平尾帆夏",
+      "gen": "4",
+      "hinakoi": "07",
+      "unison": "231",
+      "hinamsg": "72",
+      "hinablog": "31"
+    },
+    {
+      "name": "平岡海月",
+      "gen": "4",
+      "hinakoi": "08",
+      "unison": "232",
+      "hinamsg": "73",
+      "hinablog": "32"
+    },
+    {
+      "name": "藤嶌果歩",
+      "gen": "4",
+      "hinakoi": "09",
+      "unison": "233",
+      "hinamsg": "74",
+      "hinablog": "33"
+    },
+    {
+      "name": "宮地すみれ",
+      "gen": "4",
+      "hinakoi": "10",
+      "unison": "234",
+      "hinamsg": "75",
+      "hinablog": "34"
+    },
+    {
+      "name": "山下葉留花",
+      "gen": "4",
+      "hinakoi": "11",
+      "unison": "235",
+      "hinamsg": "76",
+      "hinablog": "35"
+    },
+    {
+      "name": "渡辺莉奈",
+      "gen": "4",
+      "hinakoi": "12",
+      "unison": "236",
+      "hinamsg": "77",
+      "hinablog": "36"
+    }
+  ],
+  "saitoasuka": [
+    {
+      "name": "齋藤飛鳥",
+      "gen": "1",
+      "asukamsg": "1"
+    }
+  ],
+  "yodel": [
+	  {
+		  "name": "樋口日奈",
+		  "yodelmsg": ""
+	  }
+	]
+}

@@ -1,0 +1,60 @@
+{
+	"app": {
+		"unavailable": "The %s is unavailable!",
+		"notfound": "The %s is not found!",
+		"name": {
+		  "mobame": "mobile message"
+		}
+	},
+	"asset": {
+		"unavailable": "The %s asset is unavailable!",
+		"notfound": "The %s asset is not found!",
+		"notkindof": "%s is not the asset of %s application!",
+		"datagetsuccess": "Successfully get %s data!",
+		"datagetfailed": "Failed to get %s data!",
+		"datagetnotfound": "%s data is not found!",
+		"downloadpreparing": "Downloading %s...",
+		"downloadsuccess": "%s successfully downloaded!",
+		"downloadfailed": "Failed to download %s!",
+		"wrongapptype": "The type of %s should be %s, not %s!",
+		"wrongmembertype": "Please specify member object in kanji or id list!",
+		"type": {
+			"timelineorpast": "timeline or past_messages",
+			"timeline": "timeline",
+			"past_messages": "past messages",
+			"member": "member"
+		}
+	},
+	"credentials": {
+		"notfound": "Credentials of %s is not found!",
+		"reftokenunmatch": "%s doesn't match with the %s refresh_token format!",
+		"reftokenundefined": "You probably haven't defined the %s refresh_token.",
+		"acctokenupdated": "%s access_token has been successfully updated!"
+	},
+	"object": {
+		"missingkey": "The inserted data object is missing a required key."
+	},
+	"param": {
+		"assetname": "Asset Name",
+		"type": "Type",
+		"member": "Member",
+		"fromdate": "From Date",
+		"todate": "To Date",
+		"requestedat": "Requested At",
+		"author": "Author:",
+		"downloaddir": "Download folder:",
+		"progsdesc": "Improved version of sakamichi-app-ts-cli.\nTool to download sakamichi apps assets such as video and photo.\nSupported apps:",
+		"progsfulldocs": "Full documentation on github!",
+		"progssample": "Sample usage:",
+		"progsearlywarn": "*This is the early version of the app. I'll add more features later!",
+		"optsapp": "Required option. Please specify which app you want to download the assets!",
+		"optstype": "Required option. Specify the asset that you want to download!",
+		"optsmember": "Required option if you want to download mobame asset. You should write member id or member name in kanji.",
+		"optsdate": "Optional option. It's required if you want to download mobame asset with timeline mode. Date format is yyyy-mm-dd.",
+		"optsversion": "Show app version.",
+		"optshelp": "Show help for command.",
+		"optsparallel": "If you declare this, some asynchronous function might be running at once.",
+		"optsmobametoday": "Download today's mobame.",
+		"optsrefreshtoken": "Update refresh token in credentials."
+	}
+}
