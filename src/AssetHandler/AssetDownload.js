@@ -34,7 +34,7 @@ class AssetDownload {
 			: "yodel"
 		];
 	  // Get messages data and return if doesn't found!
-	  const messagesdata = await new AssetPreDownload(this.appname).mobameMessages({ mode: mode, member: member, fromdate: fromdate, todate: todate, parallel: parallel }) || [];
+	  const messagesdata = await new AssetPreDownload(this.appname).mobameMessages({ mode: mode, member: member, fromdate: fromdate, todate: todate, parallel: parallel }) ;
 		if (!messagesdata.length) {
       logging.error(i18n.__("asset.datagetnotfound", "messagesdata"));
 	    return
@@ -43,7 +43,7 @@ class AssetDownload {
 		const { pathLocal } = await new RequestEndpoint(this.appname, "groups").pathnameServerLocal();
 		const downloadMessage = async ({ message, task }) => {
 			const requiredKeys = ["id", "group_id", "member_id", "type", "published_at", "updated_at"];
-			if (!requiredKeys.every(key => message.hasOwn(key))) {
+			if (!requiredKeys.every(key => Object.keys(message).includes(key))) {
         logging.error(i18n.__("object.missingkey"));
         throw new Error(i18n.__("object.missingkey"));
       };
@@ -80,6 +80,7 @@ class AssetDownload {
       };
 		  task.title = i18n.__("asset.downloadsuccess", filename.replace(/\.\w{2,4}$/i, ""));
 		};
+		
 		// Listr
 		const subtasks = [...messagesdata].map(message => ({
 			title: "",
@@ -103,7 +104,7 @@ class AssetDownload {
 			rendererOptions: {
 				collapseSubtasks: false
 			},
-			exitOnError: false
+			exitOnError: true
 		};
 		
 		const now = MainConfig.nowTimestamp();
