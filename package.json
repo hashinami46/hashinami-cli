@@ -1,6 +1,6 @@
 {
   "name": "hashinami-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": {
     "hashinami-cli": "./bin/index.js"
   },
