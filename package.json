@@ -1,9 +1,10 @@
 {
   "name": "hashinami-cli",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "bin": {
     "hashinami-cli": "./bin/index.js"
   },
+  "main": "./src/main.js",
   "scripts": {
     "lint": "npx eslint -c .config/eslint.config.js",
     "build": "node .config/esbuild.config.js",
@@ -11,7 +12,14 @@
     "test": "HASHINAMI_APP_MODE=dev node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --config=./.config/jest.config.js"
   },
   "type": "module",
-  "keywords": [],
+  "keywords": [
+    "javascript",
+    "cli",
+    "nogizaka46",
+    "sakurazaka46",
+    "hinatazaka46",
+    "asukasaito"
+  ],
   "author": "hashinami46",
   "organization": "@hashinami-app",
   "license": "MIT",
@@ -21,27 +29,27 @@
     "url": "https://github.com/hashinami46/hashinami-cli.git"
   },
   "dependencies": {
-    "pythonia": "^1.2.1",
-    "smartwrap": "^2.0.2"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.20.0",
     "axios": "^1.7.7",
     "axios-retry": "^4.5.0",
     "boxen": "^8.0.1",
     "cheerio": "^1.0.0",
     "commander": "^12.1.0",
     "dedent": "^1.5.3",
-    "esbuild": "^0.25.0",
-    "esbuild-plugin-copy": "^2.1.1",
-    "eslint": "^9.20.1",
-    "globals": "^15.14.0",
     "i18n": "^0.15.1",
-    "jest": "^29.7.0",
     "listr2": "^8.2.5",
+    "smartwrap": "^2.0.2",
+    "pythonia": "^1.2.1",
     "string-width": "^7.2.0",
     "supports-color": "^9.4.0",
     "winston": "^3.15.0",
     "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "esbuild": "^0.25.0",
+    "esbuild-plugin-copy": "^2.1.1",
+    "eslint": "^9.20.1",
+    "globals": "^15.14.0",
+    "jest": "^29.7.0"
   }
 }
