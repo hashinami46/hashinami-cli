@@ -1,15 +1,48 @@
+/**
+ * @module RequestAttribute
+ * @description Generate some requirements to perform an http request.
+ * 
+ * Available classes and namespace:
+ * - {@link RequestAttribute} - Generate http header and read, write, or update token..
+ * 
+ * @author hashinami46
+ */
+
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
 
 import { MainConfig, logging, i18n } from "../MainConfig.js";
 import { /*AppsLists,*/ RequestEndpoint } from "./RequestEndpoint.js";
 
-// Class to generate request header such as token, etc.
+/**
+ * Class to generate request header such as token, etc.
+ * @class RequestAttribute
+ */
 class RequestAttribute {
+	/**
+	 * @constructor
+	 * @param {string} appname - Which appname you want to get the url and path.
+   */
 	constructor (appname) {
 		this.appname = appname;
 	};
-	// Bearer token read, write, update for talk apps.
+	
+	/**
+	 * Read, write, update token or cookies for talk apps.
+	 * 
+	 * @typedef {"read"|"write"|"update"} AuthTokenMode
+	 * 
+	 * @typedef {Object} AccessRefreshToken
+	 * @property {string} refresh_token - Token to refresh access_token.
+	 * @property {string} access_token - Token to access some api.
+	 * 
+	 * @param {Object} params
+	 * @param {AuthTokenMode} params.mode - Choose to read, write, or update the token.
+	 * @param {string} params.refresh_token
+	 * @param {string} params.access_token
+	 * 
+	 * @return {Promise<(AccessRefreshToken|void)>}
+	 */
 	async authToken({ mode, refresh_token, access_token }) {
 	  // Check if appname registered in the credentials.json
 		if (!Object.keys(JSON.parse(readFileSync(MainConfig.credentialsConfig, "utf8"))).includes(this.appname)) {
@@ -64,7 +97,12 @@ class RequestAttribute {
 		};
 	};
 	
-	// Generate HTTP Headers
+	/**
+	 * Generate http header to perform an apo request.
+	 * @param {Object} AccessToken
+	 * @param {string} AccessToken.access_token
+	 * @return {Promise<Object>}
+	 */
 	async customHeader({ access_token }) {
 		const { baseServer } = await new RequestEndpoint(this.appname).basenameServerLocal();
 		return {

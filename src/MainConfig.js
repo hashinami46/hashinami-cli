@@ -1,3 +1,14 @@
+/**
+ * @module MainConfig
+ * @description Stores all basic configurations for the application.
+ * 
+ * Available functions and objects:
+ * - {@link MainConfig} - Stores general configuration values.
+ * - {@link logging} - Manages application logging.
+ * 
+ * @author hashinami46
+ */
+
 import i18n from "i18n";
 import path from "path";
 import boxen from "boxen";
@@ -15,7 +26,26 @@ const { combine, timestamp, printf } = format;
 const packageJson = path.join(__dirname, "../package.json");
 const { name, version, author, organization, repository } = JSON.parse(readFileSync(packageJson, "utf8"));
 
-// メインコンフィグ
+/**
+ * Object that contains basic informations and functions.
+ * @namespace MainConfig 
+ * @property {string} appName - App name.
+ * @property {string} appVersion - App version.
+ * @property {string} appAuthor - The author of the app.
+ * @property {string} appOrganization - App organization.
+ * @property {string} appRepository - App repository.
+ * @property {string} memberDataConfig - App repository.
+ * @property {string} credentialsConfig - App repository.
+ * @property {string} langDir - Language asset directory.
+ * @property {string} tempDir - Temporary asset directory.
+ * @property {string} logsDir - Logs directory.
+ * @property {string} rcdsDir - Asset record directory.
+ * @property {string} ctlgDir - Catalog asset directory.
+ * @property {string} saveDir - Asset download directory.
+ * @property {Function} createBox - Function to generate cli-box.
+ * @property {Object} assetsRecord - Function to record downloaded assets.
+ * @property {Function} nowTimestamp - Function to generate current timestamp in yyyy-mm-dd hh:MM:ss TZ format.
+ */
 const MainConfig = {
 	
 	// About
@@ -35,7 +65,12 @@ const MainConfig = {
 	ctlgDir: path.join(process.env.HASHINAMI_LOCAL_DIR || (homedir() + "/HASHINAMI"), ".catalogs"),
 	saveDir: path.join(process.env.HASHINAMI_LOCAL_DIR || (homedir() + "/HASHINAMI")),
 	
-	// Function to create box in cli
+	/**
+	 * Function to create box in cli.
+	 * @param {Object} options - {logstring, logpath}.
+	 * @return {string} Generate box string.
+	 * @memberOf MainConfig
+	 */
 	createBox: (options) => {
 	  let text = "";
     const [max_key, max_val] = Object.entries(options)
@@ -55,8 +90,21 @@ const MainConfig = {
     return boxen(text, { padding: 1, borderStyle: "round" });
 	},
 	
-	// Function to create file record. Useful if you don't wanna duplicate files to download.
+	/**
+	 * Function to create and read file record. Useful if you don't wanna duplicate files to download. 
+	 * @namespace assetsRecord
+   * @memberOf MainConfig
+	 */
 	assetsRecord: {
+		/**
+		 * Writes text record to the specified path.
+		 * @function write
+		 * @param {Object} options
+	   * @param {string} options.logpath - File records path.
+	   * @param {string} options.logstring - What string to record.
+	   * @return {void} - This function doesn't return anything.
+	   * @memberOf MainConfig.assetsRecord
+		 */
 		write: (options) => {
 			if (!existsSync(path.dirname(options.logpath))) {
 				mkdirSync(path.dirname(options.logpath), { recursive: true });
@@ -72,6 +120,16 @@ const MainConfig = {
 				"utf8"
 		  );
 		},
+		
+		/**
+		 * Reads text record to the specified path.
+		 * @function read
+		 * @param {Object} options
+	   * @param {string} options.logpath - File records path.
+	   * @param {string} options.logstring - What string to record.
+	   * @return {boolean} - This function return true or false.
+	   * @memberOf MainConfig.assetsRecord
+		 */
 		read: (options) => {
 		  try {
 		    const stringlist = readFileSync(options.logpath, "utf8").split("\n").filter(stringlists => stringlists !== "");
@@ -82,22 +140,31 @@ const MainConfig = {
 		}
 	},
 	
-	// Function to generate human readable timestamp.
+	/**
+	 * Function to generate human readable timestamp.
+	 * @function nowTimestamp
+	 * @return {string} - Return current timestamp in yyyy-mm-dd hh:MM:ss TZ format.
+	 * @memberOf MainConfig
+	 */
 	nowTimestamp: () => {
 	  const now = new Date();
-		return (
-		  now.getFullYear().toString() + "-" +
-		  now.getMonth().toString().padStart(2, "0")   + "-" +
-		  now.getDate().toString().padStart(2, "0")    + " " +
-		  now.getHours().toString().padStart(2, "0")   + ":" +
-			now.getMinutes().toString().padStart(2, "0") + ":" +
-			now.getSeconds().toString().padStart(2, "0") + " " +
-			now.toLocaleDateString(undefined, { day:"2-digit", timeZoneName: "long" }).substring(4).match(/\b(\w)/g).join("")
-	  );
+		const datePart = now.toISOString().split("T")[0];
+		const timePart = now.toISOString().split("T")[1].split(".")[0];
+		const timeZone = now.toLocaleDateString(undefined, { day:"2-digit", timeZoneName: "long" }).substring(4).match(/\b(\w)/g).join("");
+		return `${datePart} ${timePart} ${timeZone}`;
   },
 };
 
-// Setup language
+/**
+ * Configures the application language settings using `i18n`.
+ *
+ * - Supports English (`en`), Indonesian (`id`), and Japanese (`ja`).
+ * - Language files are stored in the directory specified by `MainConfig.langDir`.
+ * - The default locale is determined by the `HASHINAMI_LANG` environment variable.
+ *   If the value is not in the supported locales, it defaults to English (`en`).
+ * - Enables object notation for nested translations.
+ * 
+ */
 i18n.configure({
   locales: ["en", "id", "ja"],
   directory: MainConfig.langDir,
@@ -105,7 +172,6 @@ i18n.configure({
   objectNotation: true
 });
 
-// ロッグメーカー
 const logging = createLogger({
 	format: combine(
 		timestamp(),

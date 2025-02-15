@@ -6,10 +6,10 @@
   },
   "main": "./src/main.js",
   "scripts": {
-    "lint": "npx eslint -c .config/eslint.config.js",
-    "build": "node .config/esbuild.config.js",
     "dev": "HASHINAMI_APP_MODE=dev node src/index.js",
-    "test": "HASHINAMI_APP_MODE=dev node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --config=./.config/jest.config.js"
+    "lint": "npx eslint -c .config/eslint.config.js",
+    "test": "HASHINAMI_APP_MODE=dev node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --config=./.config/jest.config.js",
+    "build": "node .config/esbuild.config.js"
   },
   "type": "module",
   "keywords": [
@@ -37,8 +37,8 @@
     "dedent": "^1.5.3",
     "i18n": "^0.15.1",
     "listr2": "^8.2.5",
-    "smartwrap": "^2.0.2",
     "pythonia": "^1.2.1",
+    "smartwrap": "^2.0.2",
     "string-width": "^7.2.0",
     "supports-color": "^9.4.0",
     "winston": "^3.15.0",

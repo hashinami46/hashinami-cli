@@ -1,4 +1,4 @@
-<h1 align="center">Hashinami Cli<h1>
+<h1 align="center">Hashinami Cli</h1>
 
 <div align="center">
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
@@ -20,7 +20,7 @@ It's still under development and I'll add some features to download assets from 
 ## 🛠️ Installation and Setup
 ### 🐇 Quick Installation 
 Just directly install this app globally using npm.
-```
+```shell script
 npm i -g hashinami-cli
 hashinami-cli -v
 ```
@@ -29,12 +29,17 @@ hashinami-cli -v
 ```shell script 
 git clone https://github.com/hashinami46/hashinami-cli.git
 ```
-2. Run `npm link`, instal the external dependency and the app is ready to use.
-```
+2. Go to cloned app directory and install dependency. After that, build the app. 
+```shell script
 # Go to cloned app directory
 cd hashinami-cli
-# Install external dependency
-npm i smartwrap
+# Install dependencies
+npm install
+# Build app
+npm run build
+```
+3. Run `npm link` and the app is ready to use.
+```shell script
 # Link to global package
 npm link
 hashinami-cli -v
@@ -46,31 +51,45 @@ The format is uuid v4. For example "9cdfc60a-63bd-432a-9a3f-3aea8a4f5595" (This 
 If you ask me how to obtain that, visit this [link](https://github.com/proshunsuke/colmsg/blob/main/doc%2Fhow_to_get_refresh_token.md). 
 You need to relog the app to catch **/signin** form or wait for 1 hour to catch **/update_token** form. 
 After you get the refresh_token, insert it using this command
-```
+```shell script
 # -A can be nogitalk, sakutalk, hinatalk, or asukatalk.
 hashinami-cli -A nogitalk --update-token 9cdfc60a-63bd-432a-9a3f-3aea8a4f5595
 ```
 
 ## 🔫 Supported Apps and Usage
-### 💌 Sakamichi Mobile Messages
-- **All Daily Text, Images, Videos, and Call**
-```
+### 📕 Sakamichi Blogs
+- **Member Blogs Content and Images**
+```shell script
 Options
 -A, --app Appname (nogitalk, sakutalk, hinatalk, or asukatalk).
--T, --type Asset type. Should be timeline or past_messages.
--M, --member Member name. You can enter membername in kanji or id. Can be one or more.
--fd, --fromdate yyyy-mm-dd formatted date. Required if you download timeline type. From which date you should start.
--td, --todate yyyy-mm-dd formatted date. Required if you download timeline type. Until which date you should stop.
---mobametoday This doesn't require argument. Immediately download today's mobame.
+-T, --type Asset type. Should be blogs.
+-M, --member Member name. Optional argument. If you don't specify this, the app will download the latest blogs. You can enter membername in kanji or id. Can be one or more.
+-fd, --fromdate yyyy-mm-dd formatted date. Optional argument. From which date you should start.
+-td, --todate yyyy-mm-dd formatted date. Optional argument. Until which date you should stop.
 --parallel This also doesn't require argument. If you add this argument, some asynchronous function will executed at once.
 
-hashinami-app -A nogitalk -T timeline -M 柴田柚菜 -fd 2025-02-08 -td 2025-02-11
-hashinami-app -A sakutalk -T past_messages -M 小島凪紗 --parallel
-hashinami-app -A hinatalk --mobametoday
+hashinami-cli -A sakutalk -T blogs
+hashinami-cli -A sakutalk -T blogs -M 小島凪紗
+```
+
+### 💌 Sakamichi Mobile Messages
+- **All Daily Text, Images, Videos, and Call**
+```shell script
+Options
+-A, --app Appname (nogitalk, sakutalk, hinatalk, or asukatalk).
+-T, --type Asset type. Required argument. Should be timeline or past_messages.
+-M, --member Member name. Optional argument.  If you don't specify this, the app will download the latest messages. You can enter membername in kanji or id. Can be one or more.
+-fd, --fromdate yyyy-mm-dd formatted date. Optional argument. From which date you should start.
+-td, --todate yyyy-mm-dd formatted date. Optional argument. Until which date you should stop.
+--parallel This also doesn't require argument. If you add this argument, some asynchronous function will executed at once.
+
+hashinami-cli -A nogitalk -T timeline -M 柴田柚菜 -fd 2025-02-08 -td 2025-02-11
+hashinami-cli -A sakutalk -T past_messages -M 小島凪紗 --parallel
+hashinami-cli -A hinatalk -T timeline
 ```
 
 ### ⚙️ Other Arguments
-```
+```shell script
 Options
 -v, --version Show app build version
 
@@ -78,8 +97,8 @@ hashinami-cli -v
 ```
 
 ## 🌍 App Language and Download Directory
-You can see the download directory in the app help.  
-The default is `/your/home/directory/HASHINAMI/`. 
+You can see the download directory in the app help. 
+The default is `/your/home/dir/HASHINAMI/`.
 I made this app with 3 language translation. 
 The default is en (English). You can change to id (Indonesian), or ja (Japanese). 
 You can also change those by adding the environment variable. 
@@ -96,14 +115,27 @@ HASHINAMI_LOCAL_DIR=/your/desired/path/ hashinami-cli
 ```
 
 ## 🌳 Directory Structure
-```
+```shell script
 HASHINAMI/
 ├── .cache/
 │   └── logs/
-└── Mobame/
+├── Mobame/
+└── Blog/
 ```
 
 ## 🪵 Changelog
+- v2.0.0
+```
+• Major Logic update
+• Added blogs downloader
+• Remove --mobametoday options 
+• Added main at package.json
+  You can now import the api from this app.
+```
+- v1.0.1 
+```
+• Bug Fix
+```
 - v1.0.0 
 ```
 • First commit

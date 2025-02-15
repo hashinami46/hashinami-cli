@@ -40,7 +40,6 @@ program
   .option("-fd, --fromdate <fromdate>", SmartWrap(i18n.__("param.optsdate"), { width: 60 }))
   .option("-td, --todate <todate>", SmartWrap(i18n.__("param.optsdate"), { width: 60 }))
   .option("-rt, --refresh-token <refreshtoken>", SmartWrap(i18n.__("param.optsrefreshtoken"), { width: 60 }))
-  .option("--mobametoday", SmartWrap(i18n.__("param.optsmobametoday"), { width: 60 }))
   .option("--parallel", SmartWrap(i18n.__("param.optsparallel"), { width: 60 }))
   .version(MainConfig.appVersion, "-v, --version", SmartWrap(i18n.__("param.optsversion"), { width: 60 }))
   .helpOption("-h, --help", SmartWrap(i18n.__("param.optshelp"), { width: 60 }))
@@ -48,6 +47,7 @@ program
   
 if (!process.argv.slice(2).length) {
   program.outputHelp();
+  process.exit(0);
 };
 const opts = program.opts();
 // const args = program.args;
@@ -58,7 +58,16 @@ if (opts.app && AppsLists.messagesList.includes(opts.app)) {
 		console.log(i18n.__("credentials.acctokenupdated", opts.app))
     process.exit(0);
 	};
-	if (opts.mobametoday) {
+	if (opts.type === "blogs") {
+    await new AssetDownload(opts.app).commonBlogs({ member: opts.member, fromdate: opts.fromdate, todate: opts.todate, parallel: opts.parallel })
+    process.exit(0);
+	};
+	if ((opts.fromdate || opts.todate) && (!opts.member || !opts.type)) {
+		console.error(i18n.__("param.optsmember"));
+		console.error(i18n.__("param.optstype"));
+    process.exit(1);
+	};
+	if ((opts.type === "timeline" && !opts.member)) {
 	  const groupdata = await new AssetPreDownload(opts.app, "groups").mobameData({ assetname: "groups" });
 		const member = groupdata
 		  .filter(item => item.subscription && item.subscription.state === "active")
@@ -67,5 +76,8 @@ if (opts.app && AppsLists.messagesList.includes(opts.app)) {
     process.exit(0);
 	};
 	await new AssetDownload(opts.app, "messages").commonMessages({ mode: opts.type, member: opts.member, fromdate: opts.fromdate, todate: opts.todate, parallel: opts.parallel })
+  process.exit(0);
+} else {
+	console.log(i18n.__("app.notfound", opts.app))
   process.exit(0);
 };

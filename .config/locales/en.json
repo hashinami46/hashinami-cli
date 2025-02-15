@@ -3,7 +3,8 @@
 		"unavailable": "The %s is unavailable!",
 		"notfound": "The %s is not found!",
 		"name": {
-		  "mobame": "mobile message"
+			"mobame": "mobile message",
+			"blog": "blog"
 		}
 	},
 	"asset": {
@@ -54,7 +55,6 @@
 		"optsversion": "Show app version.",
 		"optshelp": "Show help for command.",
 		"optsparallel": "If you declare this, some asynchronous function might be running at once.",
-		"optsmobametoday": "Download today's mobame.",
 		"optsrefreshtoken": "Update refresh token in credentials."
 	}
 }

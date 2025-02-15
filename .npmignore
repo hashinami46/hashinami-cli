@@ -143,5 +143,5 @@ dist
 # unit test
 __test__
 
-# bin
-bin
+# github
+.github

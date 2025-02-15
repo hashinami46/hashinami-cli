@@ -1,7 +1,31 @@
+/**
+ * @module RequestEndpoint
+ * @description Generate url and path related.
+ * 
+ * Available classes and namespace:
+ * - {@link AppsList} - Contains available apps and assets.
+ * - {@link RequestEndpoint} - Generate url server and path local.
+ * 
+ * @author hashinami46
+ */
+
 import path from "path";
 import { MainConfig, logging, i18n } from "../MainConfig.js";
 
-// Available apps list. Might add in the comments later.
+/**
+ * @namespace AppsLists
+ * Object that store list of apps.
+ * @property {Array<string>} messagesList - Contains list of available message apps.
+ * @property {Array<string>} gamesList - Contains list of available game apps.
+ * @property {Array<string>} commonImageList - Contains list of available image assets that can be downloaded.
+ * @property {Array<string>} commonVideoList - Contains list of available video assets that can be downloaded.
+ * @property {Array<string>} commonUnityList - Contains list of available unity assets that can be downloaded.
+ * @property {Array<string>} commonUsmList - Contains list of available usm assets that can be downloaded.
+ * @property {Array<string>} commonCpkList - Contains list of available cpk assets that can be downloaded.
+ * @property {Array<string>} commonConfigList - Contains list of available config assets that can be downloaded.
+ * @property {Array<string>} commonCatalogList - Contains list of available catalog assets that can be downloaded.
+ * @constant
+ */
 const AppsLists = {
 	messagesList: [
     "nogitalk",
@@ -105,14 +129,28 @@ const AppsLists = {
 	],
 };
 
-// Class to generate url and path related.
+/**
+ * Class to generate url and path related.
+ * @class RequestEndpoint
+ */
 class RequestEndpoint {
+	/**
+	 * @constructor
+	 * @param {string} appname - Which appname you want to get the url and path.
+	 * @param {string} assetname - Which app asset you want to get the url and path.
+	 */
 	constructor (appname, assetname = "") {
 		this.appname = appname;
 		this.assetname = `${appname.replace(/_(1|2)/, "")}_${assetname}`;
 	};
 	
-	// Basepath related
+	/**
+	 * Get base url server or local path storage of the specified app.
+	 * @typedef BaseServerLocal 
+	 * @property {string} baseServer - Server Url.
+	 * @property {string} baseLocal - Local path.
+	 * @return {Promise<BaseServerLocal>} 
+	 */
 	async basenameServerLocal() {
 		if (![...AppsLists.messagesList, ...AppsLists.gamesList].includes(this.appname)) {
 			logging.error(i18n.__("app.unavailable", this.appname));
@@ -156,7 +194,13 @@ class RequestEndpoint {
       : { baseServer: undefined, baseLocal: undefined };
 	};
 	
-	// Subpath related
+	/**
+	 * Get sub url server or local path storage of the specified app.
+	 * @typedef PathServerLocal 
+	 * @property {string} pathServer - Server sub url.
+	 * @property {string} pathLocal - Local sub path.
+	 * @return {Promise<PathServerLocal>} 
+	 */
 	async pathnameServerLocal() {
 		const typelist = [
 			...AppsLists.commonImageList,

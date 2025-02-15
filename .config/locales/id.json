@@ -3,7 +3,8 @@
 		"unavailable": "Aplikasi %s tidak tersedia!",
 		"notfound": "Aplikasi %s tidak ditemukan!",
 		"name": {
-		  "mobame": "mobile message"
+		  "mobame": "mobile message",
+		  "blog": "blog"
 		}
 	},
 	"asset": {
@@ -54,7 +55,6 @@
 		"optsversion": "Perlihatkan versi aplikasi.",
 		"optshelp": "Perlihatkan bantuan untuk perintah.",
 		"optsparallel": "Apabila mendeklarasikan ini, beberapa fungsi asinkron akan berjalan serentak.",
-		"optsmobametoday": "Unduh mobame hari ini.",
-		"optsrefreshtoken": "Update refresh token di kredensial."
+	  "optsrefreshtoken": "Update refresh token di kredensial."
 	}
 }
