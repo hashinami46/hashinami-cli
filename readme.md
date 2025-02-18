@@ -15,7 +15,7 @@ It's still under development and I'll add some features to download assets from 
 
 ## 📝 Requirements
 ### **Runtime**
-- Nodejs >= 18 (Suggested: 20.5.1)
+- Nodejs LTS (Suggested: 20.5.1)
 
 ## 🛠️ Installation and Setup
 ### 🐇 Quick Installation 
@@ -46,12 +46,12 @@ hashinami-cli -v
 ```
 
 ## 🔐 Setup Credentials
-You need to specify the refresh token download mobame assets.
+You need to specify the refresh token to download mobame assets.
 The format is uuid v4. For example "9cdfc60a-63bd-432a-9a3f-3aea8a4f5595" (This is invalid token). 
 If you ask me how to obtain that, visit this [link](https://github.com/proshunsuke/colmsg/blob/main/doc%2Fhow_to_get_refresh_token.md). 
 You need to relog the app to catch **/signin** form or wait for 1 hour to catch **/update_token** form. 
 After you get the refresh_token, insert it using this command
-```shell script
+```
 # -A can be nogitalk, sakutalk, hinatalk, or asukatalk.
 hashinami-cli -A nogitalk --update-token 9cdfc60a-63bd-432a-9a3f-3aea8a4f5595
 ```
@@ -59,7 +59,7 @@ hashinami-cli -A nogitalk --update-token 9cdfc60a-63bd-432a-9a3f-3aea8a4f5595
 ## 🔫 Supported Apps and Usage
 ### 📕 Sakamichi Blogs
 - **Member Blogs Content and Images**
-```shell script
+```
 Options
 -A, --app Appname (nogitalk, sakutalk, hinatalk, or asukatalk).
 -T, --type Asset type. Should be blogs.
@@ -74,7 +74,7 @@ hashinami-cli -A sakutalk -T blogs -M 小島凪紗
 
 ### 💌 Sakamichi Mobile Messages
 - **All Daily Text, Images, Videos, and Call**
-```shell script
+```
 Options
 -A, --app Appname (nogitalk, sakutalk, hinatalk, or asukatalk).
 -T, --type Asset type. Required argument. Should be timeline or past_messages.
@@ -89,7 +89,7 @@ hashinami-cli -A hinatalk -T timeline
 ```
 
 ### ⚙️ Other Arguments
-```shell script
+```
 Options
 -v, --version Show app build version
 
@@ -98,7 +98,7 @@ hashinami-cli -v
 
 ## 🌍 App Language and Download Directory
 You can see the download directory in the app help. 
-The default is `/your/home/dir/HASHINAMI/`.
+The default is "/your/home/dir/HASHINAMI/".
 I made this app with 3 language translation. 
 The default is en (English). You can change to id (Indonesian), or ja (Japanese). 
 You can also change those by adding the environment variable. 
@@ -115,7 +115,7 @@ HASHINAMI_LOCAL_DIR=/your/desired/path/ hashinami-cli
 ```
 
 ## 🌳 Directory Structure
-```shell script
+```
 HASHINAMI/
 ├── .cache/
 │   └── logs/

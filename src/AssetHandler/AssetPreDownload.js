@@ -271,7 +271,7 @@ class AssetPreDownload {
 		  );
 		    url.searchParams.append("cd", this.appname === "nogitalk" ? "MEMBER" : this.appname === "sakutalk" ? "blog" : "member");
 			  url.searchParams.append("fromdate", dat);
-			  url.searchParams.append("timestatus", "old");
+			  url.searchParams.append("timestatus", "new");
 			  url.searchParams.append("getnum", "10");
 			  url.searchParams.append("get", "B");
 		    urls.add(url.href);

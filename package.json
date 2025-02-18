@@ -2,14 +2,15 @@
   "name": "hashinami-cli",
   "version": "2.0.0",
   "bin": {
-    "hashinami-cli": "./bin/index.js"
+    "hashinami-cli": "bin/index.js"
   },
   "main": "./src/main.js",
   "scripts": {
     "dev": "HASHINAMI_APP_MODE=dev node src/index.js",
     "lint": "npx eslint -c .config/eslint.config.js",
     "test": "HASHINAMI_APP_MODE=dev node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --config=./.config/jest.config.js",
-    "build": "node .config/esbuild.config.js"
+    "build": "node .config/esbuild.config.js",
+    "release": "release-it"
   },
   "type": "module",
   "keywords": [
@@ -26,18 +27,23 @@
   "description": "Cli based sakamichi apps downloader.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hashinami46/hashinami-cli.git"
+    "url": "git+https://github.com/hashinami46/hashinami-cli.git"
   },
   "dependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@release-it/conventional-changelog": "^10.0.0",
     "axios": "^1.7.7",
     "axios-retry": "^4.5.0",
     "boxen": "^8.0.1",
     "cheerio": "^1.0.0",
     "commander": "^12.1.0",
     "dedent": "^1.5.3",
+    "husky": "^9.1.7",
     "i18n": "^0.15.1",
     "listr2": "^8.2.5",
     "pythonia": "^1.2.1",
+    "release-it": "^18.1.2",
     "smartwrap": "^2.0.2",
     "string-width": "^7.2.0",
     "supports-color": "^9.4.0",
@@ -51,5 +57,35 @@
     "eslint": "^9.20.1",
     "globals": "^15.14.0",
     "jest": "^29.7.0"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {}
+          ]
+        }
+      }
+    }
   }
 }

@@ -145,3 +145,6 @@ __test__
 
 # github
 .github
+
+# husky
+.husky
