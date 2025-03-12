@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>3.0.1 (2025-03-12)</small>
+
+* fix: update readme.md ([a52f0ee](https://github.com/hashinami46/hashinami-cli/commit/a52f0ee))
+
 ## 3.0.0 (2025-03-12)
 
 * feat: add support for sony music communication message apps, nogifes, nogikoi, sakukoi, hinakoi and  ([a0e8838](https://github.com/hashinami46/hashinami-cli/commit/a0e8838))
