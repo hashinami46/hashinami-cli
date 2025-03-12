@@ -1,60 +1,227 @@
 {
-	"app": {
-		"unavailable": "「%s」アプリケーションは利用出来ません！",
-		"notfound": "「%s」アプリケーションが見つかりません！",
-		"name": {
-			"mobame": "モバイルメッセージ",
-			"blog": "ブログ"
-		}
-	},
-	"asset": {
-		"unavailable": "「%s」アセットは利用出来ません！",
-		"notfound": "「%s」アセットが見つかりません！",
-		"notkindof": "「%s」は%sのアセットではありません！",
-		"datagetsuccess": "「%s」のデータを取得に成功しました！",
-		"datagetfailed": "「%s」のデータを取得に失敗しました！",
-		"datagetnotfound": "「%s」のデータが見つかりません！",
-		"downloadpreparing": "「%s」をダウンロード中。。。",
-		"downloadsuccess": "「%s」のダウンロードが成功しました！",
-		"downloadfailed": "「%s」のダウンロードが失敗しました！",
-		"wrongapptype": "「%s」のタイプは%sです。「%s」ではありません！",
-		"wrongmembertype": "メンバーオブジェクトを漢字またはIDリストで指定してください！",
-		"type": {
-			"timelineorpast": "「timeline」 とか 「past_messages」",
-			"timeline": "タイムライン",
-			"past_messages": "過去のメッセージ",
-			"member": "「メンバー」"
-		}
-	},
-	"credentials": {
-		"notfound": "「%s」のログイン情報が見つかりません!",
-		"reftokenunmatch": "「%s」は「%s」refresh_tokenの形式と間違えます！",
-		"reftokenundefined": "おそらく「%s」のためのrefresh_tokenが定義されていません。",
-		"acctokenupdated": "「%s」のaccess_tokenが更新に成功されました！"
-	},
-	"object": {
-		"missingkey": "挿入されたデータオブジェクトに必要なキーがありません。"
-	},
-	"param": {
-		"assetname": "アセット名",
-		"type": "タイプ",
-		"member": "メンバー",
-		"fromdate": "開始日",
-		"todate": "終了日",
-		"requestedat": "リクエスト日時",
-		"author": "作成者：",
-		"downloaddir": "ダウンロードフォルダ：",
-		"progsdesc": "sakamichi-app-ts-cliの改良版。\nビデオや写真などの坂道アプリのアセットをダウンロードするためのツール。\nサポートされているアプリ：",
-		"progsfulldocs": "完全なドキュメントはgithubにあります!",
-		"progssample": "使用例：",
-		"progsearlywarn": "※これはアプリの初期バージョンです。今後さらに機能を追加していきます！",
-		"optsapp": "必要な引数です。どんなアプリがアセットをダウンロードしたいを指定してください！",
-		"optstype": "必要な引数です。アセットがダウンロードしたいを指定してください！",
-		"optsmember": "モバイルメッセージアセットをダウンロードしたい時には必要な引数です。メンバーIDとかメンバーの漢字の本名を指定してお願いします。",
-		"optsdate": "オプションな引数です。タイムラインモードでモバイルメッセージアセットをダウンロードしたい時には必要になります。日付形式は「yyyy-mm-dd」。",
-		"optsversion": "アプリのバージョンを表示。",
-		"optshelp": "コマンドのヘルプを表示。",
-		"optsparallel": "これを宣言すると、いくつかの非同期関数が同時に実行される可能性があります。", 
-	  "optsrefreshtoken": "クレデンシャルにリフレッシュトケンを更新します。"
-	}
+  "general": {
+    "found": "{{name}}が見つかりました！",
+    "notfound": "{{name}}が見つかりませんでした！",
+    "undefined": "{{name}}が未定義です！",
+    "success": "{{function}}が成功しました！",
+    "failed": "{{function}}が失敗しました！",
+    "exists": "「{{- filename}}」はすでに存在しました！",
+		"notkindof": "「{{- filename}}」は「{{assetname}}」のアセットではありません！",
+    "clibox": {
+      "success": "$t(general.success, {\"function\": \"cli-boxを生成すること\"})",
+      "failed": "$t(general.failed, {\"function\": \"cli-boxを生成すること\"})"
+    },
+    "encrypt": {
+      "success": "$t(general.success, {\"function\": \"データを暗号すること\"})",
+      "failed": "$t(general.success, {\"function\": \"データを暗号すること\"})"
+    },
+    "decrypt": {
+      "success": "$t(general.success, {\"function\": \"データを復号すること\"})",
+      "failed": "$t(general.success, {\"function\": \"データを復号すること\"})"
+    },
+    "dataget": {
+      "success": "$t(general.success, {\"function\": \"「{{dataname}}」データを取得すること\"})",
+      "failed": "$t(general.failed, {\"function\": \"「{{dataname}}」データを取得すること\"})"
+    },
+    "download": {
+      "happening": "{{- name}}をダウンロード中...",
+      "success": "$t(general.success, {\"function\": \"「{{- name}}」をダウンロードすること\"})",
+      "failed": "$t(general.failed, {\"function\": \"「{{- name}}」をダウンロードすること\"})"
+    },
+    "temporary": {
+      "create": "一時ファイルとフォルダーを作成しています。",
+      "delete": "一時ファイルとフォルダーを削除しています。"
+    },
+    "demux": "ファイルをデマックスしています。",
+    "convert": "ファイルを再生可能なメディアに変換しています。",
+    "spawn": {
+			"error": "プロセスエラー!「{{- command}}」がシステムに存在するかインストールされているか確認してください！"
+		},
+		"install": {
+			"preparing_deps": "依存関係をインストール中。。。",
+			"preparing_pycricodecs": "PyCriCodecsをインストール中。。。",
+			"success_pycricodecs": "$t(general.success, {\"function\": \"PyCriCodecsのインストール\"})",
+			"failed_pycricodecs": "$t(general.failed, {\"function\": \"PyCriCodecsのインストール\"})",
+		  "preparing_otherrequirements": "UnityPyと他の依存関係をインストール中。。。",
+			"success_otherrequirements": "$t(general.success, {\"function\": \"UnityPyと他の依存関係のインストール\"})",
+			"failed_otherrequirements": "$t(general.failed, {\"function\": \"UnityPyと他の依存関係のインストール\"})",
+			"deps_notinstalled": "「{{name}}」はまだインストールされていません。「hashinami-cli --install-deps」を実行してインストールしてください。"
+	  }
+  },
+  "parameters": {
+    "appname": {
+      "title": "アプリケーション名",
+      "notfound": "$t(general.notfound, {\"name\": \"「{{name}}」アプリケーション\"})",
+      "cli_opts": "必要なオプション。どんなアプリがアセットをダウンロードしたいを指定してください。",
+      "mobame": {
+        "title": "モバイルメッセージ"
+      },
+      "mobameblog": {
+				"title": "モバイルメッセージとブログ"
+			},
+      "nogikoi": {
+        "title": "乃木恋"
+      },
+      "nogifes": {
+        "title": "乃木坂リズムフェスティバル"
+      },
+      "sakukoi": {
+				"title": "サクコイ"
+			},
+			"hinakoi": {
+				"title": "ひな恋"
+			},
+			"unison": {
+				"title": "ユニソンエアー"
+			}
+    },
+    "assetname": {
+      "title": "アセット名",
+      "notfound": "$t(general.notfound, {\"name\": \"「{{name}}」アセット\"})",
+      "wrongassetname_mobamemessages": "間違ったモバイルメッセージアセットタイプ。「timeline」とか「past_messages」になるはずです！",
+      "wrongassetname_mobameblogs": "間違ったブログアセットタイプ。「blogs」になるはずです！",
+      "wrongassetname_mobamemessagesandblogs": "間違ったアセットタイプ。「timeline」、「past_messages」または「blogs」になるはずです！",
+      "wrongassetname_assets": "間違ったアセットタイプ。存在しているアセットは「hashinami-cli -A {{name}} --available-asset」のコマンドで確認してお願いします！",
+      "cli_opts": "必要なオプション。どんなアセットをダウンロードしたいを指定してください。",
+      "blog": {
+        "title": "ブログ"
+      }
+    },
+    "mode": {
+			"wrongmode_catalogmode": "間違ったカタログモード。「read」または「generate」になるはずです！"
+		},
+    "member": {
+      "title": "メンバー",
+      "wrongmembertype": "間違ったメンバータイプ。メンバーＩＤまたは漢字のメンバー名の配列である必要があります！",
+      "cli_opts": "モバイルメッセージをダウンロードする場合は、必要なオプション。 メンバーＩＤまたは漢字のメンバー名の配列である必要があります。"
+    },
+    "index": {
+      "title_fromdate": "開始日",
+      "title_todate": "終了日",
+      "title_fromid": "スタートインデックス",
+      "title_toid": "エンドインデックス",
+      "title_id": "アセットＩＤ",
+      "wrongindex_fromlessto": "間違ったインデックス！開始インデックスは終了インデックスより大きくなければなりません！",
+      "wrongindex_undefined": "間違ったインデックス！開始インデックスと終了インデックスの両方を指定してください！",
+      "wrongindex_catalogid": "カタログＩＤが間違っています。生成する場合はカタログＩＤを指定してください！",
+      "wrongindex_lessthancatalog": "間違ったインデックス！開始インデックスまたは終了インデックスは、カタログの長さまたは「{{length}}」より小さくする必要があります！",
+      "wrongindex_maxrangeexceed": "インデックス範囲が間違っています。クラッシュを回避するには、五百未満の範囲を指定する必要があります！",
+      "cli_opts": "アセットインデックス番号または日付を指定します。モバイルメッセージとブログのアセットの場合は「yyyy-mm-dd」ですが、他のアセットの場合は数字です。"
+    },
+    "color": {
+      "wrongcolor_nogikoicard": "間違っている$t(parameters.appname.nogikoi.title)カードの色！「pink」、「blue」または「green」になります！",
+      "cli_opts": "乃木恋カードの色。「pink」、「blue」または「green」になります。"
+    },
+    "star": {
+      "wrongstar_nogikoicard": "間違っている$t(parameters.appname.nogikoi.title)カードスター！１～８の間でなければなりません！",
+      "cli_opts": "乃木恋カードの1-8スターセレクション。"
+    },
+    "series": {
+      "wrongseries_nogikoisprites": "間違っている$t(parameters.appname.nogikoi.title)シリーズＩＤ！１～９の間でなければなりません！",
+      "cli_opts": "乃木恋ユニフォームシリーズの選択。"
+    },
+    "parallel": {
+      "title": "平行",
+      "cli_opts": "一度にいくつかの非同期関数を実行します。"
+    },
+    "record": {
+      "title": "記録",
+      "cli_opts": "R/Wアセットレコードを有効にします。"
+    },
+    "requestedat": {
+      "title": "リクエスト日時"
+    },
+    "message": {
+      "wrongmessage_noobjectkeys": "間違ったメッセージオブジェクト！いくつかのキーが見つかりません。"
+    },
+    "version": {
+      "cli_opts": "アプリバージョンを表示します。"
+    },
+    "help": {
+      "cli_opts": "コマンドのヘルプを表示します。"
+    },
+    "catalog": {
+	    "title": "カタログ",
+	    "title_id": "カタログＩＤ",
+	    "title_length": "カタログの長さ",
+	    "title_requestedlength": "要求されたカタログの長さ",
+	    "wrongcatalog_notfound": "「{{name}}」カタログがロカルストレージに見つかりません。",
+	    "wrongcatalog_corrupted": "「{{name}}」が破損しているようです。カタログの形式が正しいことを確認してください。",
+	    "cli_opts": "ゲームアセット情報を保存するのカタログＩＤ。"
+    },
+    "filter": {
+	    "title": "フィルター",
+	    "cli_opts": "カタログフィルターを有効または無効にします。"
+    },
+    "process": {
+	    "title": "プロセス名",
+	    "name": {
+		    "pythondeps_install": "Pythonの依存関係のインストール。"
+	    }
+    },
+    "info": {
+	    "title_memberid": "メンバーＩＤ：",
+	    "title_apptitle": "アプリケーションタイトル：",
+	    "title_appname": "アプリケーション名：",
+	    "title_availableasset": "存在しましたアセット：",
+	    "title_sampleusage": "サンプルの使用法：",
+	    "title_advancedusage": "高度な使用法：",
+	    "title_refreshtoken": "リフレッシュトケン："
+    },
+    "cheatsheet": {
+	    "cli_opts": "一般的な使用方法、メンバーＩＤ、利用可能なアセットを表示します。"
+    }
+  },
+  "credentials": {
+    "notfound": "$t(general.notfound, {\"name\": \"「{{name}}」のクレデンシャル\"})",
+    "refresh_token": {
+      "notfound": "$t(general.notfound, {\"name\": \"「{{name}}」のリフレッシュトケン\"})",
+      "unmatch": "「{{token}}」は「{{appname}}」リフレッシュトークンの形式と一致しません！",
+      "update": {
+        "success": "$t(general.success, {\"function\": \"「{{name}}」のリフレッシュトケンを更新すること\"})",
+        "failed": "$t(general.failed, {\"function\": \"「{{name}}」のリフレッシュトケンを更新すること\"})"
+      },
+      "cli_opts": "資格情報でトークンを更新します。"
+    },
+    "access_token": {
+      "update": {
+        "success": "$t(general.success, {\"function\": \"「{{name}}」のアクセストケンを更新すること\"})",
+        "failed": "$t(general.failed, {\"function\": \"「{{name}}」のアクセストケンを更新すること\"})"
+      }
+    },
+    "mode": {
+      "wrong_authtoken": "間違った資格情報アクセスモード。「read」、「write」または「update」になりました！"
+    }
+  },
+  "cli": {
+    "parts": {
+      "supportedapps": [
+        "- 坂道モバイルメッセージ（nogitalk, sakutalk, hinatalk）",
+        "- 齋藤飛鳥モバイルメッセージ（asukatalk）",
+        "- 白石麻衣モバイルメッセージ（maiyantalk）",
+        "- 山下美月モバイルメッセージ（mizukitalk）",
+        "- Yodelモバイルメッセージ（yodeltalk）",
+        "- Centforceモバイルメッセージ（centforcetalk）",
+        "- $t(parameters.appname.nogifes.title)（nogifes）",
+        "- $t(parameters.appname.nogikoi.title)（nogikoi）",
+        "- $t(parameters.appname.sakukoi.title)（sakukoi）",
+			  "- $t(parameters.appname.hinakoi.title)（hinakoi）",
+			  "- $t(parameters.appname.unison.title)（unison）"
+      ],
+      "downloaddir": "ダウンロードのディレクトリ：\n {{- dir}}",
+      "author": "作者：\n {{author}}",
+      "githubrepo": "ＧＩＴＨＵＢリポジトリ：\n {{- repo}}",
+      "note": "注記：\n ※これはアプリの初期バージョンです。今後さらに機能を追加していきます！",
+      "samplecommand": [
+        "hashinami-cli -A nogitalk -T timeline --parallel",
+			  "hashinami-cli -A nogitalk -T timeline -M 柴田柚菜 -f 2025-02-08 -t 2025-02-11 --parallel",
+			  "hashinami-cli -A nogifes -T photo_common -f 12812 -t 12850 --parallel",
+			  "hashinami-cli -A unison -T catalog -C 20250228120634",
+			  "hashinami-cli -A unison -T chara_movie",
+			  "hashinami-cli -A sakukoi -T movie -f 1 -t 100"
+      ]
+    },
+    "description": "「Sakamichi-App-TS-CLI」の改良バージョン。\nビデオや写真などの坂道アプリのアセットをダウンロードするためのツール。\n\nサポートされているアプリ：\n $t(cli.parts.supportedapps, { \"joinArrays\": \"\\n \" })\n\n$t(cli.parts.downloaddir)\n\n$t(cli.parts.author)\n\n$t(cli.parts.note)\n\n$t(cli.parts.githubrepo)",
+    "help": "\nサンプルの使用法：\n $t(cli.parts.samplecommand, {\"joinArrays\":\"\\n \"})"
+  }
 }

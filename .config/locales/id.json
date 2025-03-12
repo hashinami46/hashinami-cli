@@ -1,60 +1,227 @@
 {
-	"app": {
-		"unavailable": "Aplikasi %s tidak tersedia!",
-		"notfound": "Aplikasi %s tidak ditemukan!",
-		"name": {
-		  "mobame": "mobile message",
-		  "blog": "blog"
-		}
-	},
-	"asset": {
-		"unavailable": "Asset %s tidak tersedia!",
-		"notfound": "Asset %s tidak ditemukan!",
-		"notkindof": "%s bukan asset dari aplikasi %s!",
-		"datagetsuccess": "Berhasil mendapatkan data %s!",
-		"datagetfailed": "Gagal mendapatkan data %s!",
-		"datagetnotfound": "Data %s tidak ditemukan!",
-		"downloadpreparing": "Sedang mengunduh %s...",
-		"downloadsuccess": "Berhasil mengunduh %s!",
-		"downloadfailed": "Gagal mengunduh %s",
-		"wrongapptype": "Tipe dari %s seharusnya %s, bukan %s!",
-		"wrongmembertype": "Harap memasukan objek member dengan list kanji atau id!",
-		"type": {
-			"timelineorpast": "timeline atau past_messages",
-			"timeline": "timeline",
-			"past_messages": "past messages",
-			"member": "member"
-		}
-	},
-	"credentials": {
-		"notfound": "Kredensial dari %s tidak ditemukan!",
-		"reftokenunmatch": "%s tidak cocok dengan format refresh_token dari %s!",
-		"reftokenundefined": "Anda mungkin belum memasukkan refresh_token dari %s.",
-		"acctokenupdated": "access_token dari %s berhasil diupdate!"
-	},
-	"object": {
-		"missingkey": "Objek data yang dimasukkan tidak memiliki nilai kunci yang diperlukan."
-	},
-	"param": {
-		"assetname": "Nama Asset",
-		"type": "Tipe",
-		"member": "Member",
-		"fromdate": "Dari Tanggal",
-		"todate": "Sampai Tanggal",
-		"requestedat": "Diminta Pada",
-		"author": "Pembuat:",
-		"downloaddir": "Folder unduhan:",
-		"progsdesc": "Versi yang ditingkatkan dari sakamichi-app-ts-cli.\nAlat untuk mengunduh asset aplikasi sakamichi seperti video dan foto.\nAplikasi yang didukung:",
-		"progsfulldocs": "Dokumentasi lengkap ada di github!",
-		"progssample": "Contoh penggunaan:",
-		"progsearlywarn": "*Ini adalah versi awal dari aplikasi. Akan ada banyak fitur di masa depan!",
-		"optsapp": "Opsi wajib. Harap masukkan nama aplikasi apa yang ingin diunduh assetnya!",
-		"optstype": "Opsi wajib. Masukkan asset yang ingin diunduh!",
-		"optsmember": "Opsi wajib apabila ingin mengunduh asset mobame. Anda harus memasukkan id member atau nama member dalam kanji.",
-		"optsdate": "Opsi tidak wajib. Ini diperlukan apabila ingin mengunduh asset mobame dengan mode timeline. Format tanggalnya adalah yyyy-mm-dd.",
-		"optsversion": "Perlihatkan versi aplikasi.",
-		"optshelp": "Perlihatkan bantuan untuk perintah.",
-		"optsparallel": "Apabila mendeklarasikan ini, beberapa fungsi asinkron akan berjalan serentak.",
-	  "optsrefreshtoken": "Update refresh token di kredensial."
-	}
+  "general": {
+    "found": "{{name}} ditemukan!",
+    "notfound": "{{name}} tidak ditemukan!",
+    "undefined": "{{name}} tidak terdefinisi!",
+    "success": "Berhasil {{function}}!",
+    "failed": "Gagal {{function}}!",
+    "exists": "{{- filename}} sudah ada!",
+		"notkindof": "{{- filename}} bukan termasuk aset {{assetname}}!",
+    "clibox": {
+      "success": "$t(general.success, {\"function\": \"membuat cli-box\"})",
+      "failed": "$t(general.failed, {\"function\": \"membuat cli-box\"})"
+    },
+    "encrypt": {
+      "success": "$t(general.success, {\"function\": \"mengenkripsikan\"}) data",
+      "failed": "$t(general.success, {\"function\": \"mengenkripsikan\"}) data"
+    },
+    "decrypt": {
+      "success": "$t(general.success, {\"function\": \"mendekripsikan\"}) data",
+      "failed": "$t(general.success, {\"function\": \"mendekripsikan\"}) data"
+    },
+    "dataget": {
+      "success": "$t(general.success, {\"function\": \"mengambil data {{dataname}}\"})",
+      "failed": "$t(general.failed, {\"function\": \"mengambil data {{dataname}}\"})"
+    },
+    "download": {
+      "happening": "Mengunduh {{- name}}...",
+      "success": "$t(general.success, {\"function\": \"mengunduh {{- name}}\"})",
+      "failed": "$t(general.failed, {\"function\": \"mengunduh {{- name}}\"})"
+    },
+    "temporary": {
+			"create": "Membuat file dan folder sementara.",
+		  "delete": "Menghapus file dan folder sementara."
+		},
+		"demux": "Mendemux file sementara.",
+		"convert": "Mengkonversi file sementara menjadi media yang bisa dimainkan.",
+		"spawn": {
+			"error": "Proses error! Pastikan jika {{- command}} ada atau sudah terpasang di dalam sistem!"
+		},
+		"install": {
+			"preparing_deps": "Sedang memasang dependensi...",
+			"preparing_pycricodecs": "Sedang memasang PyCriCodecs...",
+			"success_pycricodecs": "$t(general.success, {\"function\": \"memasang PyCriCodecs\"})",
+			"failed_pycricodecs": "$t(general.failed, {\"function\": \"memasang PyCriCodecs\"})",
+		  "preparing_otherrequirements": "Sedang memasang UnityPy dan dependensi yang lain...",
+			"success_otherrequirements": "$t(general.success, {\"function\": \"memasang UnityPy dan dependensi yang lain\"})",
+			"failed_otherrequirements": "$t(general.failed, {\"function\": \"memasang UnityPy dan dependensi yang lain\"})",
+			"deps_notinstalled": "{{name}} belum terpasang. Harap install terlebih dahulu dengan perintah hashinami-cli --install-deps."
+	  }
+  },
+  "parameters": {
+    "appname": {
+      "title": "Nama Aplikasi",
+      "notfound": "$t(general.notfound, {\"name\": \"Aplikasi {{name}}\"})",
+      "cli_opts": "Opsi yang diperlukan. Silakan tentukan aplikasi mana yang ingin Anda unduh asetnya.",
+      "mobame": {
+        "title": "Mobile Message"
+      },
+      "mobameblog": {
+				"title": "Mobile Message dan Blog"
+			},
+      "nogikoi": {
+        "title": "Nogikoi"
+      },
+      "nogifes": {
+        "title": "Nogizaka Rythm Festival"
+      },
+      "sakukoi": {
+				"title": "Sakukoi"
+			},
+			"hinakoi": {
+				"title": "Hinakoi"
+			},
+			"unison": {
+				"title": "Uni's on Air"
+			}
+    },
+    "assetname": {
+      "title": "Nama Aset",
+      "notfound": "$t(general.notfound, {\"name\": \"Aset {{name}}\"})",
+      "wrongassetname_mobamemessages": "Tipe aset mobile message salah. Seharusnya timeline atau past_messages!",
+      "wrongassetname_mobameblogs": "Tipe aset blog salah. Seharusnya blogs!",
+      "wrongassetname_mobamemessagesandblogs": "Tipe aset salah. Seharusnya timeline, past_messages, atau blogs!",
+      "wrongassetname_assets": "Tipe aset salah. Harap memastikan aset yang tersedia dengan perintah hashinami-cli -A {{name}} --available-asset!",
+      "cli_opts": "Opsi yang diperlukan. Silakan tentukan aset mana yang ingin Anda unduh.",
+      "blog": {
+        "title": "Blog"
+      }
+    },
+    "mode": {
+			"wrongmode_catalogmode": "Mode katalog salah. Seharusnya read atau generate!"
+		},
+    "member": {
+      "title": "Member",
+      "wrongmembertype": "Tipe member salah. Seharusnya array dari id anggota atau nama member dalam kanji!",
+      "cli_opts": "Opsi yang diperlukan jika Anda ingin mengunduh aset mobame. Anda harus menulis id member atau nama member dalam kanji."
+    },
+    "index": {
+      "title_fromdate": "Dari Tanggal",
+      "title_todate": "Ke Tanggal",
+      "title_fromid": "Dari Indeks",
+      "title_toid": "Sampai Indeks",
+      "title_id": "Asset ID",
+      "wrongindex_fromlessto": "Indeks salah! Indeks dari harus lebih besar dari indeks sampai!",
+      "wrongindex_undefined": "Indeks salah! Silakan tentukan baik indeks dari dan sampai!",
+      "wrongindex_catalogid": "ID katalog salah! Harap masukkan id katalog apabila ingin membuat katalog!",
+      "wrongindex_lessthancatalog": "Indeks salah! Indeks dari atau indeks sampai harus tidak lebih dari panjang katalog atau {{length}}!",
+      "wrongindex_maxrangeexceed": "Jarak indeks salah! Seharusnya jarak indeks ada dibawah 500 untuk menghindari crash!",
+      "cli_opts": "Tentukan nomor indeks aset atau tanggal. Ini adalah yyyy-mm-dd untuk aset mobame dan blog, tetapi nomor untuk aset lainnya."
+    },
+    "color": {
+      "wrongcolor_nogikoicard": "Warna kartu $t(parameters.appname.nogikoi.title) salah! Seharusnya pink, blue, atau green!",
+      "cli_opts": "Warna untuk kartu nogikoi. Seharusnya pink, blue, atau green."
+    },
+    "star": {
+      "wrongstar_nogikoicard": "Bintang kartu $t(parameters.appname.nogikoi.title) salah! Seharusnya antara 1-8!",
+      "cli_opts": "Pemilihan bintang 1-8 untuk kartu nogikoi."
+    },
+    "series": {
+      "wrongseries_nogikoisprites": "ID seri $t(parameters.appname.nogikoi.title) salah! Seharusnya antara 1-9!",
+      "cli_opts": "Pemilihan seri seragam nogikoi. Seharusnya antara 1-9."
+    },
+    "parallel": {
+      "title": "Paralel",
+      "cli_opts": "Jalankan beberapa fungsi asinkron secara bersamaan."
+    },
+    "record": {
+      "title": "Catat",
+      "cli_opts": "Mengaktifkan r/w pada catatan aset."
+    },
+    "requestedat": {
+      "title": "Diminta Pada"
+    },
+    "message": {
+      "wrongmessage_noobjectkeys": "Objek pesan salah! Beberapa key hilang!"
+    },
+    "version": {
+      "cli_opts": "Tampilkan versi aplikasi."
+    },
+    "help": {
+      "cli_opts": "Tampilkan bantuan untuk perintah."
+    },
+    "catalog": {
+	    "title": "Katalog",
+	    "title_id": "ID Katalog",
+	    "title_length": "Panjang Katalog",
+	    "title_requestedlength": "Panjang Katalog yang Diminta",
+	    "wrongcatalog_notfound": "Katalog {{name}} tidak ditemukan di penyimpanan lokal.",
+	    "wrongcatalog_corrupted": "Kelihatannya {{name}} rusak. Pastikan bahwa format katalog sudah benar!",
+	    "cli_opts": "ID katalog yang menyimpan informasi mengenai aset game."
+    },
+    "filter": {
+	    "title": "Filter",
+	    "cli_opts": "Aktifkan atau matikan filter pada katalog."
+    },
+    "process": {
+	    "title": "Nama Proses",
+	    "name": {
+		    "pythondeps_install": "Memasang Dependensi Python."
+	    }
+    },
+    "info": {
+	    "title_memberid": "Member ID:",
+	    "title_apptitle": "Judul Aplikasi:",
+	    "title_appname": "Nama Aplikasi:",
+	    "title_availableasset": "Aset Tersedia:",
+	    "title_sampleusage": "Contoh Penggunaan:",
+	    "title_advancedusage": "Penggunaan Lanjutan:",
+	    "title_refreshtoken": "Refresh Token:"
+    },
+    "cheatsheet": {
+	    "cli_opts": "Lihat penggunaan umum, id member dan asset yang tersedia."
+    }
+  },
+  "credentials": {
+    "notfound": "$t(general.notfound, {\"name\": \"Kredensial {{name}}\"})",
+    "refresh_token": {
+      "notfound": "$t(general.notfound, {\"name\": \"Refresh token {{name}}\"})",
+      "unmatch": "{{token}} tidak cocok dengan format refresh token {{appname}}!",
+      "update": {
+        "success": "$t(general.success, {\"function\": \"untuk memperbarui refresh token {{name}}\"})",
+        "failed": "$t(general.failed, {\"function\": \"untuk memperbarui refresh token {{name}}\"})"
+      },
+      "cli_opts": "Perbarui refresh token dalam kredensial."
+    },
+    "access_token": {
+      "update": {
+        "success": "$t(general.success, {\"function\": \"untuk memperbarui token akses {{name}}\"})",
+        "failed": "$t(general.failed, {\"function\": \"untuk memperbarui token akses {{name}}\"})"
+      }
+    },
+    "mode": {
+      "wrong_authtoken": "Mode akses kredensial salah. Seharusnya read, write, atau update!"
+    }
+  },
+  "cli": {
+    "parts": {
+	    "supportedapps": [
+			  "- Sakamichi Mobile Message (nogitalk, sakutalk, hinatalk)",
+			  "- Saito Asuka Mobile Message (asukatalk)",
+	      "- Shiraishi Mai Mobile Message (maiyantalk)",
+			  "- Yamashita Mizuki Mobile Message (mizukitalk)",
+			  "- Yodel Mobile Message (yodeltalk)",
+			  "- Centforce Mobile Message (centforcetalk)",
+			  "- $t(parameters.appname.nogifes.title) (nogifes)",
+			  "- $t(parameters.appname.nogikoi.title) (nogikoi)",
+			  "- $t(parameters.appname.sakukoi.title) (sakukoi)",
+			  "- $t(parameters.appname.hinakoi.title) (hinakoi)",
+			  "- $t(parameters.appname.unison.title) (unison)"
+		  ],
+      "downloaddir": "Direktori Unduhan:\n {{- dir}}",
+      "author": "Author:\n {{author}}",
+      "githubrepo": "Repositori Github:\n {{- repo}}",
+      "note": "Catatan:\n *Ini adalah versi awal dari aplikasi. Saya akan menambahkan lebih banyak fitur nanti!",
+      "samplecommand": [
+			  "hashinami-cli -A nogitalk -T timeline --parallel",
+			  "hashinami-cli -A nogitalk -T timeline -M 柴田柚菜 -f 2025-02-08 -t 2025-02-11 --parallel",
+			  "hashinami-cli -A nogifes -T photo_common -f 12812 -t 12850 --parallel",
+			  "hashinami-cli -A unison -T catalog -C 20250228120634",
+			  "hashinami-cli -A unison -T chara_movie",
+			  "hashinami-cli -A sakukoi -T movie -f 1 -t 100"
+			]
+    },
+    "description": "Versi yang ditingkatkan dari sakamichi-app-ts-cli.\nAlat untuk mengunduh aset aplikasi sakamichi seperti video dan foto.\n\nAplikasi yang didukung:\n $t(cli.parts.supportedapps, { \"joinArrays\": \"\\n \" })\n\n$t(cli.parts.downloaddir)\n\n$t(cli.parts.author)\n\n$t(cli.parts.note)\n\n$t(cli.parts.githubrepo)",
+    "help": "\nContoh Penggunaan:\n $t(cli.parts.samplecommand, {\"joinArrays\":\"\\n \"})"
+  }
 }

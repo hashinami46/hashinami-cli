@@ -10,7 +10,7 @@
  */
 
 import path from "path";
-import { MainConfig, logging, i18n } from "../MainConfig.js";
+import { MainConfig, logging, i18next } from "../MainConfig.js";
 
 /**
  * @namespace AppsLists
@@ -32,20 +32,18 @@ const AppsLists = {
     "sakutalk",
     "hinatalk",
     "asukatalk",
-    // "mizukitalk",
-    // "maiyantalk",
-    // "centforcetalk",
-    // "yodeltalk",
+    "mizukitalk",
+    "maiyantalk",
+    "centforcetalk",
+    "yodeltalk",
   ],
   gamesList: [
-	  "nogifes_1",
-    "nogifes_2",
-    "nogikoi_1",
-    "nogikoi_2",
+	  "nogifes",
+    "nogikoi",
     "hinakoi",
     "sakukoi",
-    "itsunogi",
-    "nogifra",
+    //"itsunogi",
+    //"nogifra",
     "unison"
 	],
   commonImageList: [
@@ -75,7 +73,6 @@ const AppsLists = {
     "nogifra_images",
     "unison_scene_card", 
     "unison_gacha_stamp", 
-    "unison_stamp"
 	],
 	commonUsmList: [
 		"nogifes_movie_card",
@@ -83,8 +80,8 @@ const AppsLists = {
     "nogifra_movies"
 	],
 	commonCpkList: [
-		"nogifes_focus_data_lo",
-    "nogifes_focus_data_hi",
+		"nogifes_focus_data",
+    "nogifes_focus_data_high",
     "unison_appeal_movie", 
     "unison_chara_profile",
     "unison_exf_member_movie",
@@ -99,8 +96,8 @@ const AppsLists = {
     "unison_smart_movie", 
     "unison_movie_photo", 
     "unison_drama_bgm", 
-    "unison_gacha_bgm", 
-    "unison_voice",
+    "unison_event_bgm", 
+    //"unison_voice",
     "nogifra_sounds"
 	],
 	commonConfigList: [
@@ -108,13 +105,13 @@ const AppsLists = {
 		    "sakutalk", 
 		    "hinatalk", 
 		    "asukatalk", 
-		    // "mizukitalk",
-		    // "maiyantalk",
-		    // "centforcetalk",
+		    "mizukitalk",
+		    "maiyantalk",
+		    "centforcetalk",
 		    "yodeltalk"]
 		 .map(app => [
 			`${app}_update_token`,
-			`${app}_devices`,
+			/*`${app}_devices`,*/
 			`${app}_groups`,
 			`${app}_members`,
 			`${app}_tags`,
@@ -141,7 +138,7 @@ class RequestEndpoint {
 	 */
 	constructor (appname, assetname = "") {
 		this.appname = appname;
-		this.assetname = `${appname.replace(/_(1|2)/, "")}_${assetname}`;
+		this.assetname = `${appname}_${assetname}`;
 	};
 	
 	/**
@@ -153,18 +150,26 @@ class RequestEndpoint {
 	 */
 	async basenameServerLocal() {
 		if (![...AppsLists.messagesList, ...AppsLists.gamesList].includes(this.appname)) {
-			logging.error(i18n.__("app.unavailable", this.appname));
-			console.error(i18n.__("app.unavailable", this.appname));
-			return
+			logging.error(i18next.t("parameters.appname.notfound", { name: this.appname }));
+			console.error(i18next.t("parameters.appname.notfound", { name: this.appname }));
+		  return
 	  };
-	  return this.appname === "nogifes_1"
+	  return this.appname === "nogifes"
+      ? { baseServer: "https://v1static.nogifes.jp", baseLocal: path.join(MainConfig.saveDir, "/Nogifes") }
+	    /*
+	    : this.appname === "nogifes_1"
       ? { baseServer: "https://v1static.nogifes.jp", baseLocal: path.join(MainConfig.saveDir, "/Nogifes") }
       : this.appname === "nogifes_2"
       ? { baseServer: "https://v2static.nogifes.jp", baseLocal: path.join(MainConfig.saveDir, "/Nogifes") }
+      */
+      : this.appname === "nogikoi"
+      ? { baseServer: "https://prd-content.static.game.nogikoi.jp", baseLocal: path.join(MainConfig.saveDir, "/Nogikoi") }
+      /*
       : this.appname === "nogikoi_1"
       ? { baseServer: "https://prd-content.static.game.nogikoi.jp", baseLocal: path.join(MainConfig.saveDir, "/Nogikoi") }
       : this.appname === "nogikoi_2"
       ? { baseServer: "https://prd-content-gree.static.game.nogikoi.jp", baseLocal: path.join(MainConfig.saveDir, "/Nogikoi") }
+	    */
       : this.appname === "hinakoi"
       ? { baseServer: "https://prd-content.static.game.hinakoi.jp", baseLocal: path.join(MainConfig.saveDir, "/Hinakoi") }
       : this.appname === "sakukoi"
@@ -179,12 +184,12 @@ class RequestEndpoint {
       ? { baseServer: "https://api.kh.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/hinatazaka46") }
       : this.appname === "asukatalk"
       ? { baseServer: "https://api.asukasaito.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/saitoasuka") }
-      // : this.appname === "mizukitalk"
-      // ? { baseServer: "https://api.mizukiyamashita.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/yamashitamizuki") }
-      // : this.appname === "maiyantalk"
-      // ? { baseServer: "https://api.maishiraishi.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/shiraishimai") }
-      // : this.appname === "centforce"
-      // ? { baseServer: "https://api.cf.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/centforcetalk") }
+      : this.appname === "mizukitalk"
+      ? { baseServer: "https://api.mizukiyamashita.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/yamashitamizuki") }
+      : this.appname === "maiyantalk"
+      ? { baseServer: "https://api.maishiraishi.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/shiraishimai") }
+      : this.appname === "centforcetalk"
+      ? { baseServer: "https://api.cf.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/centforcetalk") }
       : this.appname === "yodeltalk"
       ? { baseServer: "https://api.ydl.glastonr.net", baseLocal: path.join(MainConfig.saveDir, "/Mobame/yodeltalk") }
       : this.appname === "nogifra"
@@ -212,9 +217,9 @@ class RequestEndpoint {
 			...AppsLists.commonCatalogList
 		];
 		if (!typelist.includes(this.assetname)) {
-			logging.error(i18n.__("asset.unavailable", this.assetname));
-			console.error(i18n.__("asset.unavailable", this.assetname));
-			return
+			logging.error(i18next.t("parameters.assetname.notfound", { name: this.assetname }));
+			console.error(i18next.t("parameters.assetname.notfound", { name: this.assetname }));
+		  return
 	  };
 	  const { baseServer, baseLocal } = await this.basenameServerLocal();
 	  return this.assetname === "nogifes_photo_common"
@@ -223,9 +228,9 @@ class RequestEndpoint {
       ? { pathServer: new URL("/resource/Background/CampaignLoginBonusBackground/", baseServer).href, pathLocal: path.join(baseLocal, "/bonus_campaign") }
       : this.assetname === "nogifes_reward_movie" 
       ? { pathServer: new URL("/resource/Movie/Reward/", baseServer).href, pathLocal: path.join(baseLocal, "/reward_movie") }
-      : this.assetname === "nogifes_focus_data_lo"
+      : this.assetname === "nogifes_focus_data"
       ? { pathServer: new URL("/resource/Movie/Focus/", baseServer).href, pathLocal: path.join(baseLocal, "/focus_data") }
-      : this.assetname === "nogifes_focus_data_hi"
+      : this.assetname === "nogifes_focus_data_high"
       ? { pathServer: new URL("/resource/Movie/HighFocusMovie/", baseServer).href, pathLocal: path.join(baseLocal, "/focus_data_high") }
       : this.assetname === "nogifes_movie_card"   
       ? { pathServer: new URL("/resource/Movie/MovieCard/", baseServer).href, pathLocal: path.join(baseLocal, "/movie_card") }

@@ -148,3 +148,9 @@ __test__
 
 # husky
 .husky
+
+# changelog
+CHANGELOG.md
+
+# python_modules
+python_modules

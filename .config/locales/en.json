@@ -1,60 +1,227 @@
 {
-	"app": {
-		"unavailable": "The %s is unavailable!",
-		"notfound": "The %s is not found!",
-		"name": {
-			"mobame": "mobile message",
-			"blog": "blog"
-		}
+	"general": {
+		"found": "{{name}} is found!",
+		"notfound": "{{name}} is not found!",
+		"undefined": "{{name}} is undefined!",
+		"success": "Successfully {{function}}!",
+		"failed": "Failed to {{function}}!",
+		"exists": "{{- filename}} is already exists!",
+		"notkindof": "{{- filename}} is not a kind of {{assetname}} asset!",
+		"clibox": {
+			"success": "$t(general.success, {\"function\": \"generate cli-box\"})",
+			"failed": "$t(general.failed, {\"function\": \"generate cli-box\"})"
+		},
+		"encrypt": {
+			"success": "$t(general.success, {\"function\": \"encrypt\"}) data",
+			"failed": "$t(general.success, {\"function\": \"encrypt\"}) data"
+		},
+		"decrypt": {
+			"success": "$t(general.success, {\"function\": \"decrypt\"}) data",
+			"failed": "$t(general.success, {\"function\": \"decrypt\"}) data"
+		},
+		"dataget": {
+			"success": "$t(general.success, {\"function\": \"get {{dataname}} data\"})",
+			"failed": "$t(general.failed, {\"function\": \"get {{dataname}} data\"})"
+		},
+		"download": {
+			"happening": "Downloading {{- name}}...",
+			"success": "$t(general.success, {\"function\": \"download {{- name}}\"})",
+			"failed": "$t(general.failed, {\"function\": \"download {{- name}}\"})"
+		},
+		"temporary": {
+			"create": "Creating temporary file and folder.",
+		  "delete": "Deleting temporary file and folder."
+		},
+		"demux": "Demuxing temporary file.",
+		"convert": "Converting temporary file into playable media.",
+		"spawn": {
+			"error": "Process error! Make sure that {{- command}} is exist or installed in your system!"
+		},
+		"install": {
+			"preparing_deps": "Installing dependency...",
+			"preparing_pycricodecs": "Installing PyCriCodecs...",
+			"success_pycricodecs": "$t(general.success, {\"function\": \"install PyCriCodecs\"})",
+			"failed_pycricodecs": "$t(general.failed, {\"function\": \"install PyCriCodecs\"})",
+		  "preparing_otherrequirements": "Installing UnityPy and another requirements...",
+			"success_otherrequirements": "$t(general.success, {\"function\": \"install UnityPy and another requirements\"})",
+			"failed_otherrequirements": "$t(general.failed, {\"function\": \"install UnityPy and another requirements\"})",
+			"deps_notinstalled": "{{name}} haven't installed yet. Please install it by executing hashinami-cli --install-deps."
+	  }
 	},
-	"asset": {
-		"unavailable": "The %s asset is unavailable!",
-		"notfound": "The %s asset is not found!",
-		"notkindof": "%s is not the asset of %s application!",
-		"datagetsuccess": "Successfully get %s data!",
-		"datagetfailed": "Failed to get %s data!",
-		"datagetnotfound": "%s data is not found!",
-		"downloadpreparing": "Downloading %s...",
-		"downloadsuccess": "%s successfully downloaded!",
-		"downloadfailed": "Failed to download %s!",
-		"wrongapptype": "The type of %s should be %s, not %s!",
-		"wrongmembertype": "Please specify member object in kanji or id list!",
-		"type": {
-			"timelineorpast": "timeline or past_messages",
-			"timeline": "timeline",
-			"past_messages": "past messages",
-			"member": "member"
-		}
-	},
+	"parameters": {
+		"appname": {
+			"title": "Application Name",
+			"notfound": "$t(general.notfound, {\"name\": \"The {{name}} app\"})",
+			"cli_opts": "Required options. Please specify which app that you want to download the asset.",
+			"mobame": {
+				"title": "Mobile Message"
+			},
+			"mobameblog": {
+				"title": "Mobile Message and Blog"
+			},
+			"nogikoi": {
+				"title": "Nogikoi"
+			},
+			"nogifes": {
+				"title": "Nogizaka Rythm Festival"
+			},
+			"sakukoi": {
+				"title": "Sakukoi"
+			},
+			"hinakoi": {
+				"title": "Hinakoi"
+			},
+			"unison": {
+				"title": "Uni's on Air"
+			}
+		},
+    "assetname": {
+	    "title": "Asset Name",
+	    "notfound": "$t(general.notfound, {\"name\": \"The {{name}} asset\"})",
+	    "wrongassetname_mobamemessages": "Wrong mobile message type. Should be timeline or past_messages!",
+	    "wrongassetname_mobameblogs": "Wrong blogs type. Should be blogs!",
+			"wrongassetname_mobamemessagesandblogs": "Wrong asset type. Should be timeline, past_messages, or blogs!",
+			"wrongassetname_assets": "Wrong asset type. Please check available assets using hashinami-cli -A {{name}} --available-assets command!",
+			"cli_opts": "Required options. Please specify which asset you want to download.",
+			"blog": {
+				"title": "Blog"
+			}
+    },
+    "mode": {
+			"wrongmode_catalogmode": "Wrong catalog mode. Should be read or generate!"
+		},
+    "member": {
+	    "title": "Member",
+	    "wrongmembertype": "Wrong member type. Should be an array of member id or member name in kanji!",
+	    "cli_opts": "Required option if you want to download mobame asset. You should write member id or member name in kanji."
+    },
+    "index": {
+	    "title_fromdate": "From Date",
+	    "title_todate": "To Date",
+	    "title_fromid": "From Index",
+	    "title_toid": "To Index",
+	    "title_id": "Asset ID",
+	    "wrongindex_fromlessto": "Wrong index! From index should be greater than to index!",
+	    "wrongindex_undefined": "Wrong index! Please specify both from and to index!",
+	    "wrongindex_catalogid": "Wrong catalog id! Please specify catalog id if you want to generate!",
+	    "wrongindex_lessthancatalog": "Wrong index! From index or to index should be less than catalog length or {{length}}.",
+	    "wrongindex_maxrangeexceed": "Wrong index range! You should specify the range less than 500 to avoid crash.",
+	    "cli_opts": "Specify asset index number or date. It's yyyy-mm-dd for mobame and blogs asset, but number for another assets."
+    },
+    "color": {
+	    "wrongcolor_nogikoicard": "Wrong $t(parameters.appname.nogikoi.title) card color! Should be pink, blue, or green!",
+	    "cli_opts": "Color for nogikoi card. Should be pink, blue, or green."
+    },
+    "star": {
+	    "wrongstar_nogikoicard": "Wrong $t(parameters.appname.nogikoi.title) card star! Should be between 1-8!",
+	    "cli_opts": "1-8 star selection for nogikoi card."
+    },
+    "series": {
+	    "wrongseries_nogikoisprites": "Wrong $t(parameters.appname.nogikoi.title) series id! Should be between 1-9!",
+	    "cli_opts": "Nogikoi uniform series selection. Should be between 1-9."
+    },
+    "parallel": {
+	    "title": "Parallel",
+	    "cli_opts": "Run some asynchronous function at once."
+    },
+    "record": {
+	    "title": "Record",
+	    "cli_opts": "Enabling r/w asset record."
+    },
+    "requestedat": {
+	    "title": "Requested At"
+    },
+    "message": {
+	    "wrongmessage_noobjectkeys": "Wrong message object! Some keys is missing!"
+    },
+    "version": {
+	    "cli_opts": "Show app version."
+    },
+    "help": {
+	    "cli_opts": "Show help for command."
+    },
+    "catalog": {
+	    "title": "Catalog",
+	    "title_id": "Catalog ID",
+	    "title_length": "Catalog Length",
+	    "title_requestedlength": "Requested Catalog Length",
+	    "wrongcatalog_notfound": "The {{name}} catalog is not found in the local storage.",
+	    "wrongcatalog_corrupted": "Seems that {{name}} is corrupted. Make sure that the catalog format is right!",
+	    "cli_opts": "Catalog ID that store game assets information."
+    },
+    "filter": {
+	    "title": "Filter",
+	    "cli_opts": "Enable or disable catalog filtering."
+    },
+    "process": {
+	    "title": "Process Name",
+	    "name": {
+		    "pythondeps_install": "Installing Python Dependencies."
+	    }
+    },
+    "info": {
+	    "title_memberid": "Member ID:",
+	    "title_apptitle": "Application Title:",
+	    "title_appname": "Application Name:",
+	    "title_availableasset": "Available Asset:",
+	    "title_sampleusage": "Sample Usage:",
+	    "title_advancedusage": "Advanced Usage:",
+	    "title_refreshtoken": "Refresh Token:"
+    },
+    "cheatsheet": {
+	    "cli_opts": "Show common usages, member id and available assets."
+    }
+  },
 	"credentials": {
-		"notfound": "Credentials of %s is not found!",
-		"reftokenunmatch": "%s doesn't match with the %s refresh_token format!",
-		"reftokenundefined": "You probably haven't defined the %s refresh_token.",
-		"acctokenupdated": "%s access_token has been successfully updated!"
+		"notfound": "$t(general.notfound, {\"name\": \"The credentials of {{name}}\"})",
+		"refresh_token": {
+			"notfound": "$t(general.notfound, {\"name\": \"The refresh token of {{name}}\"})",
+			"unmatch": "{{token}} doesn't match with {{appname}} refresh token format!",
+			"update": {
+			  "success": "$t(general.success, {\"function\": \"updated {{name}} refresh token\"})",
+			  "failed": "$t(general.failed, {\"function\": \"update {{name}} refresh token\"})"
+		  },
+			"cli_opts": "Update refresh token in the credentials."
+		},
+		"access_token": {
+			"update": {
+			  "success": "$t(general.success, {\"function\": \"updated {{name}} access token\"})",
+			  "failed": "$t(general.failed, {\"function\": \"update {{name}} access token\"})"
+		  }
+		},
+		"mode": {
+			"wrong_authtoken": "Wrong credentials access mode. Should be read, write, or update!"
+		}
 	},
-	"object": {
-		"missingkey": "The inserted data object is missing a required key."
-	},
-	"param": {
-		"assetname": "Asset Name",
-		"type": "Type",
-		"member": "Member",
-		"fromdate": "From Date",
-		"todate": "To Date",
-		"requestedat": "Requested At",
-		"author": "Author:",
-		"downloaddir": "Download folder:",
-		"progsdesc": "Improved version of sakamichi-app-ts-cli.\nTool to download sakamichi apps assets such as video and photo.\nSupported apps:",
-		"progsfulldocs": "Full documentation on github!",
-		"progssample": "Sample usage:",
-		"progsearlywarn": "*This is the early version of the app. I'll add more features later!",
-		"optsapp": "Required option. Please specify which app you want to download the assets!",
-		"optstype": "Required option. Specify the asset that you want to download!",
-		"optsmember": "Required option if you want to download mobame asset. You should write member id or member name in kanji.",
-		"optsdate": "Optional option. It's required if you want to download mobame asset with timeline mode. Date format is yyyy-mm-dd.",
-		"optsversion": "Show app version.",
-		"optshelp": "Show help for command.",
-		"optsparallel": "If you declare this, some asynchronous function might be running at once.",
-		"optsrefreshtoken": "Update refresh token in credentials."
+	"cli": {
+		"parts": {
+		  "supportedapps": [
+			  "- Sakamichi Mobile Message (nogitalk, sakutalk, hinatalk)",
+			  "- Saito Asuka Mobile Message (asukatalk)",
+	      "- Shiraishi Mai Mobile Message (maiyantalk)",
+			  "- Yamashita Mizuki Mobile Message (mizukitalk)",
+			  "- Yodel Mobile Message (yodeltalk)",
+			  "- Centforce Mobile Message (centforcetalk)",
+			  "- $t(parameters.appname.nogifes.title) (nogifes)",
+			  "- $t(parameters.appname.nogikoi.title) (nogikoi)",
+			  "- $t(parameters.appname.sakukoi.title) (sakukoi)",
+			  "- $t(parameters.appname.hinakoi.title) (hinakoi)",
+			  "- $t(parameters.appname.unison.title) (unison)"
+		  ],
+		  "downloaddir": "Download Directory:\n {{- dir}}",
+		  "author": "Author:\n {{author}}",
+		  "githubrepo": "Github repository:\n {{- repo}}",
+		  "note": "Note:\n *This is the early version of the app. I'll add more features later!",
+		  "samplecommand": [
+			  "hashinami-cli -A nogitalk -T timeline --parallel",
+			  "hashinami-cli -A nogitalk -T timeline -M 柴田柚菜 -f 2025-02-08 -t 2025-02-11 --parallel",
+			  "hashinami-cli -A nogifes -T photo_common -f 12812 -t 12850 --parallel",
+			  "hashinami-cli -A unison -T catalog -C 20250228120634",
+			  "hashinami-cli -A unison -T chara_movie",
+			  "hashinami-cli -A sakukoi -T movie -f 1 -t 100"
+			]
+		},
+		"description": "Improved version of sakamichi-app-ts-cli.\nTool to download sakamichi apps assets such as video and photo.\n\nSupported apps:\n $t(cli.parts.supportedapps, { \"joinArrays\": \"\\n \" })\n\n$t(cli.parts.downloaddir)\n\n$t(cli.parts.author)\n\n$t(cli.parts.note)\n\n$t(cli.parts.githubrepo)",
+		"help": "\nSample Usage:\n $t(cli.parts.samplecommand, {\"joinArrays\":\"\\n \"})"
 	}
 }

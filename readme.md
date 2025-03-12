@@ -7,6 +7,9 @@
 ## 🌸 Support Me
 <div align="center">
   <a href="https://www.buymeacoffee.com/hashinami"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="BuyMeACoffe"></a>
+  <img style={{marginRight: "5px", marginLeft: "5px"}} src="https://img.shields.io/npm/v/hashinami-cli?logo=npm&logoColor=cb3837" alt="npm version" />
+  <img style={{marginRight: "5px", marginLeft: "5px"}} src="https://img.shields.io/npm/dw/hashinami-cli?logo=npm&logoColor=cb3837" alt="npm download total" />
+  <img style={{marginRight: "5px", marginLeft: "5px"}} src="https://github.com/hashinami46/hashinami-cli/actions/workflows/npm-publish.yml/badge.svg" alt="github build status" />
 </div>
 
 ## 🚀 Description
@@ -53,7 +56,7 @@ You need to relog the app to catch **/signin** form or wait for 1 hour to catch 
 After you get the refresh_token, insert it using this command
 ```
 # -A can be nogitalk, sakutalk, hinatalk, or asukatalk.
-hashinami-cli -A nogitalk --update-token 9cdfc60a-63bd-432a-9a3f-3aea8a4f5595
+hashinami-cli -A nogitalk --refresh-token 9cdfc60a-63bd-432a-9a3f-3aea8a4f5595
 ```
 
 ## 🔫 Supported Apps and Usage
@@ -121,24 +124,6 @@ HASHINAMI/
 │   └── logs/
 ├── Mobame/
 └── Blog/
-```
-
-## 🪵 Changelog
-- v2.0.0
-```
-• Major Logic update
-• Added blogs downloader
-• Remove --mobametoday options 
-• Added main at package.json
-  You can now import the api from this app.
-```
-- v1.0.1 
-```
-• Bug Fix
-```
-- v1.0.0 
-```
-• First commit
 ```
 
 ## ⭐ Credits

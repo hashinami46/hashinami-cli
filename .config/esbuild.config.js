@@ -1,10 +1,10 @@
 import { build } from "esbuild";
-import { copy } from "esbuild-plugin-copy";
+// import { copy } from "esbuild-plugin-copy";
 
 await build({
-	entryPoints: ["src/index.js"],
+	entryPoints: ["src/cli.js"],
   bundle: true,
-  outfile: "bin/index.js",
+  outfile: "bin/cli.js",
   platform: "node",
   minify: true,
   format: "esm",
@@ -18,15 +18,18 @@ await build({
          const __dirname = path.dirname(__filename);`
   },
   define: {
-	  "process.env.HASHINAMI_APP_MODE": "'prod'"
+	  "process.env.HASHINAMI_APP_MODE": "'prod'",
   },
   external: [
-	  "smartwrap"
+	  "smartwrap",
+	  "pythonia",
+	  "ffmpeg-ffprobe-static"
 	],
   //sourcemap: "linked",
   legalComments: "none",
   logLevel: "info",
   metafile: true,
+  /*
   plugins: [
     copy({
       resolveFrom: "cwd",
@@ -36,5 +39,6 @@ await build({
       }
     }),
   ]
+  */
 });
 

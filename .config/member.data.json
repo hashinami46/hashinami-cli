@@ -797,7 +797,7 @@
     {
       "name": "井上梨名",
       "gen": "2",
-      "sakukoi": "",
+      "sakukoi": "01",
       "unison": "122",
       "sakumsg": "",
       "sakublog": "43"
@@ -911,7 +911,8 @@
       "gen": "2",
       "sakukoi": "13",
       "unison": "130",
-      "sakumsg": "52"
+      "sakumsg": "52",
+      "sakublog": ""
     },
     {
       "name": "石森璃花",
@@ -1311,14 +1312,247 @@
   "saitoasuka": [
     {
       "name": "齋藤飛鳥",
-      "gen": "1",
       "asukamsg": "1"
     }
   ],
+  "shiraishimai": [
+	  {
+		  "name": "白石麻衣",
+		  "maiyanmsg": "1"
+	  }
+	],
+  "yamashitamizuki": [
+	  {
+		  "name": "山下美月",
+		  "mizukimsg": "1"
+	  }
+	],
+	"centforce": [
+    {
+      "name": "無料トークルーム",
+      "centforcemsg": "53"
+    },
+    {
+      "name": "阿部華也子",
+      "centforcemsg": "1"
+    },
+    {
+      "name": "新井恵理那",
+      "centforcemsg": "63"
+    },
+    {
+      "name": "安藤咲良",
+      "centforcemsg": "2"
+    },
+    {
+      "name": "磯貝初奈",
+      "centforcemsg": "64"
+    },
+    {
+      "name": "今井美桜",
+      "centforcemsg": "4"
+    },
+    {
+      "name": "潮紗理菜",
+      "centforcemsg": "69"
+    },
+    {
+      "name": "上野愛奈",
+      "centforcemsg": "5"
+    },
+    {
+      "name": "岡副麻希",
+      "centforcemsg": "9"
+    },
+    {
+      "name": "小野寺結衣",
+      "centforcemsg": "10"
+    },
+    {
+      "name": "上村さや香",
+      "centforcemsg": "60"
+    },
+    {
+      "name": "刈川くるみ",
+      "centforcemsg": "66"
+    },
+    {
+      "name": "神田れいみ",
+      "centforcemsg": "61"
+    },
+    {
+      "name": "北川彩",
+      "centforcemsg": "13"
+    },
+    {
+      "name": "久保円華",
+      "centforcemsg": "14"
+    },
+    {
+      "name": "後藤楽々",
+      "centforcemsg": "41"
+    },
+    {
+      "name": "笹井千織",
+      "centforcemsg": "70"
+    },
+    {
+      "name": "佐々木もよこ",
+      "centforcemsg": "68"
+    },
+    {
+      "name": "齋藤菜月",
+      "centforcemsg": "55"
+    },
+    {
+      "name": "塩川菜摘",
+      "centforcemsg": "18"
+    },
+    {
+      "name": "柴田阿弥",
+      "centforcemsg": "20"
+    },
+    {
+      "name": "新内眞衣",
+      "centforcemsg": "58"
+    },
+    {
+      "name": "杉浦みずき",
+      "centforcemsg": "21"
+    },
+    {
+      "name": "鷲見玲奈",
+      "centforcemsg": "52"
+    },
+    {
+      "name": "高木由梨奈",
+      "centforcemsg": "22"
+    },
+    {
+      "name": "竹内紫麻",
+      "centforcemsg": "23"
+    },
+    {
+      "name": "田﨑さくら",
+      "centforcemsg": "43"
+    },
+    {
+      "name": "谷尻萌",
+      "centforcemsg": "48"
+    },
+    {
+      "name": "玉木碧",
+      "centforcemsg": "24"
+    },
+    {
+      "name": "中川絵美里",
+      "centforcemsg": "26"
+    },
+    {
+      "name": "長野美郷",
+      "centforcemsg": "27"
+    },
+    {
+      "name": "ハードキャッスルエリザベス",
+      "centforcemsg": "29"
+    },
+    {
+      "name": "馬場ももこ",
+      "centforcemsg": "30"
+    },
+    {
+      "name": "堀江聖夏",
+      "centforcemsg": "32"
+    },
+    {
+      "name": "森千晴",
+      "centforcemsg": "47"
+    },
+    {
+      "name": "吉川七瀬",
+      "centforcemsg": "62"
+    },
+    {
+      "name": "林佑香",
+      "centforcemsg": "59"
+    },
+    {
+      "name": "山本瑠香",
+      "centforcemsg": "56"
+    }
+	],
   "yodel": [
 	  {
 		  "name": "樋口日奈",
-		  "yodelmsg": ""
+		  "yodelmsg": "9"
+	  },
+	  {
+		  "name": "糸川耀士郎",
+		  "yodelmsg": "1"
+	  },
+	  {
+		  "name": "宮本美季",
+		  "yodelmsg": "2"
+	  },
+	  {
+		  "name": "近藤レオン",
+		  "yodelmsg": "6"
+	  },
+	  {
+		  "name": "末吉莉",
+		  "yodelmsg": "7"
+	  },
+	  {
+		  "name": "梨花",
+		  "yodelmsg": "8"
+	  },
+	  {
+		  "name": "木戸大聖",
+		  "yodelmsg": "10"
+	  },
+	  {
+		  "name": "KEIKO",
+		  "yodelmsg": "11"
+	  },
+	  {
+		  "name": "北澤ゆう",
+		  "yodelmsg": "12"
+	  },
+	  {
+		  "name": "雑談",
+		  "yodelmsg": "13"
+	  },
+	  {
+		  "name": "麻雀",
+		  "yodelmsg": "14"
+	  },
+	  {
+		  "name": "オフショット",
+		  "yodelmsg": "15"
+	  },
+	  {
+		  "name": "競馬",
+		  "yodelmsg": "16"
+	  },
+	  {
+		  "name": "ファッション",
+		  "yodelmsg": "17"
+	  },
+	  {
+		  "name": "ラジオ",
+		  "yodelmsg": "18"
+	  },
+	  {
+		  "name": "下前祐貴",
+		  "yodelmsg": "20"
+	  },
+	  {
+		  "name": "小林由依",
+		  "yodelmsg": "21"
+	  },
+	  {
+		  "name": "加藤梨里香",
+		  "yodelmsg": "22"
 	  }
 	]
 }
